@@ -1,64 +1,82 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  footer {
-    height: 150px;
-    background-color: honeydew;
-  }
-  li {
-    list-style-type: none;
-  }
-  img {
-    width: 420px;
-    height: 280px;
-    margin-bottom: 10%;
-  }
-  
-  h3 {
-    margin-top: 20%;
-    margin-bottom: 20%;
-  }
-  button {
-    border: grey solid 2px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 50%;
-    height: 40px;
-    width: 100px;
-  }
-  .ul-header {
-    display: flex;
-    justify-content: space-around;
-    margin-block: 5%;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+}
+footer {
+  height: 150px;
 
-  .ul-main {
-    display: flex;
-    justify-content: space-around;
-    margin-right: 5%;
-    margin-bottom: 6%;
-  }
-  .ul-main2 {
-    display: flex;
-    justify-content: space-around;
-    margin-right: 5%;
-  }
-  .ul-main li {
-    width: 25%;
-  }
-  #LIFESTYLE:hover{
+  color: #B4AD9E;
+}
+a:hover{
+  color: #03A9F4;
+}
+ul{
+  width: 80%;
+}
+li {
+  list-style-type: none;
+
+}
+img {
+  width: 420px;}
+h3 {
+  margin-top: 20%;
+  margin-bottom: 20%;
+  font-size: 30px;
+  width: 400px;
+  font-weight: 400;
+}
+button {
+  color: #626262;
+  border: #626262 solid 2px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 50%;
+  margin-right: 50%;
+  height: 40px;
+  width: 100px;
+}
+button:focus{
+  box-shadow: 10px 5px 5px black;
+  color: #1d1d1d ;
+  background-color: #828282;
+}
+.ul-header {
+  display: flex;
+  justify-content: space-around;
+  margin-block: 5%;
+}
+.ul-main {
+  
+  display: flex;
+  justify-content: space-around;
+  margin-right: 0;
+  margin-bottom: 6%;
+}
+.ul-main2 {
+  display: flex;
+  justify-content: space-around;
+  margin-right:0 ;
+}
+.ul-main li {
+  width: 25%;
+}
+#LIFESTYLE:hover{
 width: 190%;
 height: 45%;
-  }
-  h3 + p{
-    font-size: small ;
-  }
-  .ul-main2 li {
-    width: 25%;
-  }
-  
+}
+h3 + p{
+  font-size: small ;
+}
+.ul-main2 li {
+  width: 25%;
+}
+li p:nth-child(2) {
+  color: #B4AD9E;
+}
