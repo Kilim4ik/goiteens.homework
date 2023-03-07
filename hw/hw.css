@@ -9,23 +9,23 @@ p{
     text-transform: uppercase;
     color: red;
 }
-.p1 p{
+.wrapper_p1 p{
     color: blue;
     background: yellow;
 }
 
-.p2 p{
+.wrapper_p2 p{
     color: rgb(22, 130, 67);
 }
-.p3 p{
+.wrapper_p3 p{
     color: rgb(171, 27, 54);
 }
-.p4 p{
+.wrapper_p4 p{
     color: rgb(0, 0, 0);
 }
-.p5 p{
+.wrapper_p5 p{
     color: rgb(5, 5, 92);
 }
-.p6 p{
+.wrapper_p6 p{
     color: rgb(205, 237, 24);
 }
