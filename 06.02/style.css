@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Playfair Display', serif;
+    font-size: 14px;
   }
   footer {
     height: 150px;
@@ -12,7 +13,6 @@
     color: #B4AD9E;
   }
   a:hover{
-    text-decoration: underline;
     color: #03A9F4;
   }
   ul{
@@ -20,6 +20,7 @@
   }
   li {
     list-style-type: none;
+
   }
   img {
     width: 420px;
@@ -30,6 +31,9 @@
   h3 {
     margin-top: 20%;
     margin-bottom: 20%;
+    font-size: 30px;
+    width: 400px;
+    font-weight: 400;
   }
   button {
     color: #626262;
