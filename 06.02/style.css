@@ -7,12 +7,9 @@
   text-decoration: none;
   color: #000000;
 }
-footer {
-  height: 150px;
-  color: #B4AD9E;
-}
+
 a{
-  color: #B4AD9E;
+  color: #7D7D7D;
 }
 a:hover{
   color: #03A9F4;
