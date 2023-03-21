@@ -3,56 +3,55 @@
     font-weight: 400;
     font-size: 18px;
     border: none;
-    box-sizing: content-box;
     line-height: 22px;
-
+    box-sizing: border-box;
+    display: block;
 }
 
-div {
+/* div {
+    margin-top: 40px;
+    margin-left: 40px;
+} */
+
+button {
+    padding: 18px 32px;
     margin-top: 40px;
     margin-left: 40px;
 }
 
-button {
-    padding: 18px 32px;
-}
-
 .b1 {
-
     background-color: #B8DAFF;
     color: #112A46;
-    width: 38px;
-    height: 11px;
+    width: 100px;
+    /* height: 50px; */
 }
 
 .b2 {
     border-radius: 30px;
     background-color: #3A86FF;
     color: #fff;
-    width:
-        82px;
-    height:
-        13px;
+    width: 150px;
+    height: 58px;
     font-weight: 600;
-
 }
 
 a {
     text-decoration: none;
     color: #01A31B;
     font-weight: 600;
-
+    margin-top: 40px;
+    margin-left: 40px;
 }
 
 .b3 {
     border: 1px dashed #E63946;
     padding: 13px 32px;
     color: #1D3557;
+    width: 120px;
 }
-
 .b4 {
-    width: 82px;
-    height: 12px;
+    width: 150px;
+    /* height: 50px; */
     color: rgba(46, 46, 46, 1);
     border-radius: 20px;
     border: 1px solid;
