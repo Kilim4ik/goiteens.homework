@@ -9,7 +9,7 @@ p{
     text-transform: uppercase;
     color: red;
 }
-.wrapper_p1 p{
+main .wrapper_p1 {
     color: blue;
     background: yellow;
 }
