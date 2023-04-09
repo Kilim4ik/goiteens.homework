@@ -4,32 +4,73 @@
   font-family: 'Playfair Display', serif;
   font-size: 14px;
   line-height: 17px;
+  color: #626262;
 }
-footer {
-  height: 150px;
 
-  color: #B4AD9E;
-}
-a:hover{
-  color: #03A9F4;
-}
-ul{
-  width: 80%;
-}
 li {
   list-style-type: none;
-
 }
+nav ul {
+  margin: 0 auto;
+  width: 60%;
+  height: 180px;
+}
+
+.ul-header {
+  width: 555px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  color: #7D7D7D;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #03A9F4;
+}
+
+section {
+  width: 900px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+article {
+  width: 420px;
+  margin-bottom: 5%;
+}
+
+article:nth-child(-n+2) {
+  margin-bottom: 15%;
+}
+
+article p:nth-child(-n+2) {
+  color: #B4AD9E;
+  margin: 32px 0;
+}
+
 img {
-  width: 420px;}
+  width: 420px;
+}
+
 h3 {
-  margin-top: 6%;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
   font-size: 30px;
   width: 400px;
   font-weight: 400;
   line-height: 40px;
 }
+
+
+#LIFESTYLE:hover {
+  width: 190%;
+  height: 45%;
+}
+
 button {
   color: #626262;
   border: #626262 solid 2px;
@@ -37,53 +78,19 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  margin-left: 50%;
-  margin-right: 50%;
+  margin: 0 auto 5%;
   height: 40px;
   width: 100px;
 }
-button:focus{
+
+
+button:focus {
   box-shadow: 10px 5px 5px black;
-  color: #1d1d1d ;
+  color: #1d1d1d;
   background-color: #828282;
 }
-nav ul {
-  margin: 0 auto;
-  width: 60%;
-}
-.ul-header {
-  display: flex;
-  justify-content: space-around;
-  margin-block: 5%;
-}
-.ul-main {
-  
-  display: flex;
-  justify-content: space-around;
-  margin:0 auto ;
-  padding-bottom: 10%;
-}
-.ul-main2 {
-  display: flex;
-  justify-content: space-around;
-  margin:0 auto ;
-}
-.ul-main li {
-  width: 45%;
-}
-#LIFESTYLE:hover{
-width: 190%;
-height: 45%;
-}
-h3 + p{
-  font-size: small ;
-}
-.ul-main2 li {
-  width: 45%;
-}
-li p:nth-child(2) {
+
+footer {
+  height: 150px;
   color: #B4AD9E;
-  padding-top: 12%;
 }
