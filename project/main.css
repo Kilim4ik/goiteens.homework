@@ -1,0 +1,176 @@
+* {
+    font-size: 18px;
+    font-weight: 300;
+    box-sizing: border-box;
+    color: #000;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont {
+    width: 1000px;
+}
+
+/* общие!!! */
+/* header!!! */
+header .cont {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .cont ul {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px; 
+    height: 100px;
+    mix-blend-mode: color-burn;
+}
+
+/* header!!! */
+/* section-info!!! */
+.info {
+    height: 250px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info h2 {
+    color: pink;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.info p {
+    color: pink;
+    margin-top: 30px;
+    text-indent: 60px;
+}
+
+/* section-info!!! */
+/* section-main!!! */
+.main {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.main .cont {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.main .card {
+    width: 270px;
+    height: 350px;
+    color: #414141;
+    background-color: #ffffff9c;
+    border: 2px solid #000;
+    box-shadow: 5px 5px 5px #414141;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.main .card img {
+    width: 90%;
+    height: 150px;
+    margin: 0 auto;
+    border: 1px black solid;
+}
+
+.main .card h3 {
+    width: 90%;
+    font-size: 24px;
+    margin-left: 13px;
+    display: block;
+}
+
+.main .card p {
+    width: 90%;
+    font-size: 12px;
+    text-indent: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+.main .card .order {
+    width: 220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.main .card span {
+    width: 40px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    margin: 0 auto;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .card button {
+    width: 160px;
+    height: 30px;
+    background-color: rgb(203, 235, 1);
+    margin: 0 auto;
+}
+
+/* section-main!!! */
+/* footer !!! */
+footer {
+    height: 150px;
+    background-color: #414141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .contacts {
+    width: 20% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .contacts img  {
+    width: 50px;
+    height: 50px;
+}
+/* footer ul img:nth-child(1) {
+    width: 100px;
+} */
+footer ul:last-child li {
+    color: #ff0000; 
+    list-style-type: disc;
+}
