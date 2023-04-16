@@ -1,0 +1,30 @@
+
+div{
+    display: flex;
+    align-items: center;
+}
+div p i:first-child{
+    color: red;
+}
+div p :first-child::before{
+    content: '(';
+    color: black;
+}
+span::after{
+    content: ')';
+}
+.div::before{
+    content: '[';
+}
+.div::after{
+    content: ']';
+}
+.wrapper{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    background-image: url(https://media.tenor.com/SSY2V0RrU3IAAAAd/rick-roll-rick-rolled.gif);
+    background-size: 100px 100px;
+    background-repeat: repeat-x;
+    background-position:bottom ;
+}
