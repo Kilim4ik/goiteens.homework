@@ -1,0 +1,31 @@
+p{
+    font-size: 16px;
+}
+.wrapper p{
+    font-size: 18px;
+}
+#p1{
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: red;
+}
+.p1{
+    color: rgb(174, 0, 255);
+}
+.p2{
+    color: rgb(0, 255, 110);
+}
+.p3{
+    color: rgb(255, 0, 212);
+}
+.p5{
+    color: rgb(212, 255, 0);
+}
+.p6{
+    color: rgb(242, 0, 255);
+}
+ .wrapper_p p {
+    color: blue;
+    background: yellow;
+}
+
