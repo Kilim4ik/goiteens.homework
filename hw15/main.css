@@ -1,0 +1,279 @@
+* {
+    margin: 50px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(166, 167, 168);
+}
+
+div {
+    width: 95px;
+    height: 95px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.box1 {
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+
+    /* offset-x = 0 */
+    /* offset-y = 8px */
+    /* blur = 24px */
+    /* spread = 0 */
+    /* color = 1 */
+    /* rgba(149, 157, 165, 0.2) */
+}
+
+.box2 {
+    box-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);
+
+    /* offset-x = 0 */
+    /* offset-y = 7px */
+    /* blur = 29px */
+    /* spread = 0 */
+    /* color = 1 */
+    /* rgba(100, 100, 111, 0.2) */
+}
+
+.box3 {
+    box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.15);
+
+    /* offset-x = 1.95px */
+    /* offset-y = 1.95px */
+    /* blur = 2.6px */
+    /* spread = 0 */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.15) */
+}
+
+.box4 {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+
+    /* offset-x = 0 */
+    /* offset-y = 5px */
+    /* blur = 15px */
+    /* spread = 0 */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.35) */
+}
+
+.box5 {
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+
+    /* offset-x = 0 */
+    /* offset-y = 1px */
+    /* blur = 4px */
+    /* spread = 0 */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.16) */
+}
+
+.box6 {
+
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+    /* offset-x = 0 */
+    /* offset-y = 3px */
+    /* blur = 8px */
+    /* spread = 0 */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.25) */
+}
+
+.box7 {
+    box-shadow: 0px 2px 8px rgba(99, 99, 99, 0.2);
+
+    /* offset-x = 0 */
+    /* offset-y = 2px */
+    /* blur = 8px */
+    /* spread = 0 */
+    /* color = 1 */
+    /* rgba(99, 99, 99, 0.2) */
+}
+
+
+
+
+
+
+
+
+
+.box8 {
+    box-shadow: 0px 0px 0px 3px #333333, 0px 1px 4px rgba(0, 0, 0, 0.16);
+
+    /* offset-x = 0 */
+    /* offset-y = 0 */
+    /* blur =  */
+    /* spread = 3px */
+    /* color = 1 */
+    /* #333333*/
+    /* offset-x = 0 */
+    /* offset-y = 1px */
+    /* blur = 4px */
+    /* spread = 0 */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.16) */
+}
+
+.box9 {
+    box-shadow: 0px 0px 0px 1px rgba(27, 31, 35, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.02);
+    /* offset-x = 0 */
+    /* offset-y = 0 */
+    /* blur = 0 */
+    /* spread = 1px */
+    /* color = 1 */
+    /* rgba(27, 31, 35, 0.15) */
+    /* offset-x = 0 */
+    /* offset-y = 1px */
+    /* blur = 3px */
+    /* spread = 0 */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.02) */
+}
+
+.box10 {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    /* offset-x = 0 */
+    /* offset-y = 4px */
+    /* blur = 12px */
+    /* spread = 0 */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.1) */
+}
+
+.box11 {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 6px 24px rgba(0, 0, 0, 0.05);
+    /* offset-x = 0 */
+    /* offset-y = 0x */
+    /* blur = 0 */
+    /* spread = 1px*/
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.08)*/
+        /* offset-x = 0 */
+    /* offset-y = 6px */
+    /* blur = 24px */
+    /* spread = 0*/
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.05)*/
+}
+
+.box12 {
+    box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.16), 0px 0px 0px 1px rgba(0, 0, 0, 0.06);
+    /* offset-x = 0 */
+    /* offset-y = 10px */
+    /* blur = 36px */
+    /* spread = 0 */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.16) */
+       /* offset-x = 0 */
+    /* offset-y = 0 */
+    /* blur = 0 */
+    /* spread = 1px*/
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.06) */
+}
+
+.box13 {
+    box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+    /* offset-x = 0 */
+    /* offset-y = 48px */
+    /* blur = 100px */
+    /* spread = 0 */
+    /* color = 1 */
+    /* rgba(17, 12, 46, 0.15) */
+}
+
+.box14 {
+    box-shadow: 0px 30px 60px -30px rgba(0, 0, 0, 0.3), 0px 50px 100px -20px rgba(50, 50, 93, 0.25), inset 0px -2px 6px rgba(10, 37, 64, 0.35);
+    /* offset-x = 0 */
+    /* offset-y = 30px */
+    /* blur = 60px */
+    /* spread = -30 */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.3) */
+        /* offset-x = 0 */
+    /* offset-y = 50px */
+    /* blur = 100px */
+    /* spread = -20 */
+    /* color = 1 */
+    /* rgba(50, 50, 93, 0.25) */
+            /* offset-x = 0 */
+    /* offset-y = -2px */
+    /* blur = 6px */
+    /* spread = 0 */
+    /* color = inset */
+    /* rgba(10, 37, 64, 0.35) */
+
+}
+
+.box15 {
+    box-shadow: 0px 30px 60px -30px rgba(0, 0, 0, 0.3), 0px 50px 100px -20px rgba(50, 50, 93, 0.25), inset 0px 1px 1px rgba(255, 255, 255, 0.1);
+    /* offset-x = 0 */
+    /* offset-y = 30px */
+    /* blur = 60px */
+    /* spread = -30px */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.3) */
+            /* offset-x = 0 */
+    /* offset-y = 50px */
+    /* blur = 100px */
+    /* spread = -20 */
+    /* color = 1 */
+    /* rgba(50, 50, 93, 0.25) */
+            /* offset-x = 0 */
+    /* offset-y = 1px */
+    /* blur = 61px */
+    /* spread = 0 */
+    /* color = inset */
+    /* rgba(255, 255, 255, 0.1) */
+}
+
+.box16 {
+    box-shadow: 0px 30px 60px -30px rgba(0, 0, 0, 0.3), 0px 50px 100px -20px rgba(50, 50, 93, 0.25);
+    /* offset-x = 0 */
+    /* offset-y = 30px */
+    /* blur = 60px */
+    /* spread = -30px */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.3) */
+        /* offset-x = 0 */
+    /* offset-y = 50px */
+    /* blur = 100px */
+    /* spread = -20px */
+    /* color = 1 */
+    /* rgba(50, 50, 93, 0.25) */
+}
+
+.box17 {
+    box-shadow: 0px 8px 16px -8px rgba(0, 0, 0, 0.3), 0px 13px 27px -5px rgba(50, 50, 93, 0.25);
+    /* offset-x = 0 */
+    /* offset-y = 8px */
+    /* blur = 16px */
+    /* spread = -8px */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.3) */
+        /* offset-x = 0 */
+    /* offset-y = 13px */
+    /* blur = 27px */
+    /* spread = -5px */
+    /* color = 1 */
+    /* rgba(50, 50, 93, 0.25) */
+}
+
+.box18 {
+    box-shadow: 0px 1px 3px -1px rgba(0, 0, 0, 0.3), 0px 2px 5px -1px rgba(50, 50, 93, 0.25);
+    /* offset-x = 0 */
+    /* offset-y = 1px */
+    /* blur = 3px */
+    /* spread = -1px */
+    /* color = 1 */
+    /* rgba(0, 0, 0, 0.3) */
+       /* offset-x = 0 */
+    /* offset-y = 2px */
+    /* blur = 5px */
+    /* spread = -1px */
+    /* color = 1 */
+    /* rgbargba(50, 50, 93, 0.25) */
+}
