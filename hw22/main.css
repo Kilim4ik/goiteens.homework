@@ -1,0 +1,73 @@
+.first {
+    width: 100px;
+    height: 100px;
+    animation-name: first;
+    animation-duration: 5s;
+    background-color: red;
+    animation-iteration-count: 3;
+}
+
+@keyframes first {
+    20% {
+        background-color: green;
+    }
+
+    40% {
+        background-color: white;
+    }
+
+    60% {
+        background-color: aqua;
+    }
+
+    80% {
+        background-color: blueviolet;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+.second {
+    width: 100px;
+    height: 100px;
+    animation-name: second;
+    animation-duration: 4s;
+    border: 1px solid black;
+    animation-iteration-count: 3;
+    animation-timing-function: linear;
+}
+@keyframes second{
+  0%{
+    width: 100px;
+    height: 100px;
+  }
+  20%{
+    transform: scale(1.5);
+  }
+  80%{
+    transform: scale(1.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.third{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(14, 100, 180);
+    border: 2px solid black;
+    animation-name: third;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes third {
+ 0%{
+    transform: translateX(0);
+ }
+ 100%{
+    transform: translateX(100vw);
+ }
+}
