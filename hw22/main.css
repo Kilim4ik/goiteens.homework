@@ -32,6 +32,8 @@
 .second {
     width: 100px;
     height: 100px;
+    border-radius: 50%;
+    color: red;
     animation-name: second;
     animation-duration: 4s;
     border: 1px solid black;
@@ -40,8 +42,7 @@
 }
 @keyframes second{
   0%{
-    width: 100px;
-    height: 100px;
+    transform: scale(1);
   }
   20%{
     transform: scale(1.5);
