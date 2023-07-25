@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  margin: 0;
   font-family: var(--roboto), sans-serif;
   color: var(--color-text);
   line-height: 1.71;
@@ -41,6 +42,13 @@ nav {
   display: flex;
 }
 
+header{
+  width: 100%;
+  background-color: var(--background);
+  position: fixed;
+  bottom: 0;
+  
+}
 header .cont {
   display: flex;
   justify-content: space-between;
@@ -232,14 +240,11 @@ footer article:last-child {
   stroke: var(--light-grey);
 }
 
-.mail-svg:hover {
+.email:hover .mail-svg use {
   stroke: var(--blue-color);
 }
 
-.tel-svg {
-  width: 10px;
-  height: 16px;
-}
+
 
 .tel {
   color: var(--light-grey);
@@ -251,7 +256,12 @@ footer article:last-child {
   color: var(--blue-color);
 }
 
-.tel-svg :hover {
+.tel-svg {
+  width: 10px;
+  height: 16px;
+}
+
+.tel:hover .tel-svg use {
   stroke: var(--blue-color);
 }
 
@@ -418,8 +428,7 @@ footer article:last-child {
   margin: 0 auto;
 }
 
-.internet:hover {
-  stroke: var(--background);
+.background-contacts:hover .internet {
   fill: var(--background);
 }
 
