@@ -446,10 +446,17 @@ footer article:first-child {
 
 .card-contacts {
   width: 210px;
+  margin-top: 28px;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 30px;
 }
-
+.people h3{
+  margin-top: 30px;
+}
+.people p{
+  margin-top: 10px;
+}
 .background-contacts {
   width: 44px;
   height: 44px;
@@ -583,8 +590,13 @@ footer .background-contacts {
 .footer-input-box input {
   width: 358px;
   height: 50px;
+  color: rgba(255, 255, 255, 0.60);
+  font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
+  letter-spacing: 0.48px;
   padding-left: 16px;
+  outline: none;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.30);
   background: rgba(33, 150, 243, 0.00);
@@ -786,20 +798,21 @@ footer .background-contacts {
 }
 
 .form-icon {
-  margin-left: 12px;
+  margin: 0 12px;
   width: 18px;
   height: 18px;
   fill: var(--color-text);
 }
 
-.maodal-input {
+.maodal__input {
   width: 448px;
   height: 40px;
   border: none;
 }
 
-.maodal-input:focus {
-  border: none;
+.maodal__input:focus {
+  outline: none;
+  /* border: 0px solid beige ; */
 }
 
 .modal-text {
