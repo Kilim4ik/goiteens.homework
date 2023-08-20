@@ -207,9 +207,12 @@ footer article:first-child {
   color: var(--color-text);
   align-self: center;
 }
-.nav-list li{
+
+.nav-list li {
   position: relative;
 }
+
+
 .studio {
   line-height: 1.14;
   color: var(--color-text);
@@ -247,6 +250,7 @@ footer article:first-child {
 .kontacts:hover {
   color: var(--blue-color);
 }
+
 .email {
   color: var(--light-grey);
   text-decoration: none;
@@ -257,26 +261,21 @@ footer article:first-child {
   color: var(--blue-color);
 }
 
-.studio::before ,.kontacts::before,
-.works::before {
+.main-studio::before,
+.works-portfolio::before {
   content: " ";
   position: absolute;
+  margin-top: 28px;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 4px;
   background-color: var(--blue-color);
-  transform: scale(0);
-  transition: transform 300ms ease-out;
+
 }
-.studio:hover:before ,
-.studio:focus:before ,
-.kontacts:hover::before,
-.kontacts:focus::before,
-.works:hover::before,
-.works:focus::before {
-  transform: scale(1);
-}
+
+
+
 .mail-svg {
   width: 16px;
   height: 12px;
