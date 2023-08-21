@@ -8,11 +8,7 @@
   --raleway: 'Raleway';
 }
 
-.is-hidden {
-  visibility: 0;
-  opacity: 0;
-  pointer-events: none;
-}
+
 
 * {
   box-sizing: border-box;
@@ -713,6 +709,8 @@ footer .background-contacts {
 
 
 .modal-section {
+  width: 100%;
+  height: 100%;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.20);
   left: 0;
@@ -721,6 +719,17 @@ footer .background-contacts {
   bottom: 0;
   display: flex;
   align-items: center;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(2);
 }
 
 .modal-window {
