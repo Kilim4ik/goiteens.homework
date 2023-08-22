@@ -790,35 +790,40 @@ footer .background-contacts {
 }
 
 .input-zone {
+  position: relative;
   display: flex;
   align-items: center;
-  border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.20);
+
 }
 
-.input-zone:hover {
+.maodal__input:hover {
   border: 1px solid var(--blue-color);
 }
 
-.input-zone:focus {
+.maodal__input:focus {
   border: 1px solid var(--blue-color);
 }
-
-.input-zone:hover svg {
+.maodal__input:hover ~ .form-icon use path {
+  fill: var(--blue-color);
+}
+.maodal__input:focus + .form-icon use {
   fill: var(--blue-color);
 }
 
 .form-icon {
-  margin: 0 12px;
+  position: absolute;
+  left: 12px;
   width: 18px;
   height: 18px;
   fill: var(--color-text);
 }
 
 .maodal__input {
-  width: 448px;
+  width: 100%;
   height: 40px;
-  border: none;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.20);
+  padding-left: 42px;
 }
 
 .maodal__input:focus {
