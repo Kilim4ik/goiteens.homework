@@ -41,13 +41,21 @@ html {
   }
   .filter ul {
     margin: 40px auto;
-    list-style: square;
+    list-style: none;
   }
   .filter li {
     margin-top: 15px;
+    display: flex;
+    align-items: center;
   }
   .filter li:hover {
     color: yellow;
+  }
+  svg{
+    fill: yellow;
+    stroke: black;
+    stroke-width: 3px;
+    margin-right: 8px;
   }
   aside:hover .aside-filter {
     transform: translateX(50px);
