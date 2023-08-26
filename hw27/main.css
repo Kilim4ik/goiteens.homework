@@ -1,0 +1,58 @@
+html {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  aside {
+    position: relative;
+    width: 250px;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    transform: translateX(-200px);
+    transition: transform 0.7s linear;
+  }
+  aside:hover {
+    transform: translateX(0);
+  }
+  .aside-filter {
+    position: absolute;
+    height: 50px;
+    right: 0px;
+    height: 100%;
+    width: 50px;
+    background-color: grey;
+    transition: transform 0.7s linear;
+    display: flex;
+  }
+  .aside-filter p {
+    display: inline-block;
+    width: 50px;
+    transform: rotate(90deg);
+    align-self: center;
+  }
+  .filter {
+    width: 100%;
+    height: 100%;
+    background-color: lightslategray;
+  }
+  .filter ul {
+    margin: 40px auto;
+    list-style: square;
+  }
+  .filter li {
+    margin-top: 15px;
+  }
+  .filter li:hover {
+    color: yellow;
+  }
+  aside:hover .aside-filter {
+    transform: translateX(50px);
+  }
+  aside:hover .filter {
+    transform: translateX(0);
+  }
+  
