@@ -12,6 +12,7 @@
   visibility: 0;
   opacity: 0;
   pointer-events: none;
+  /* transform: scale(2); */
 }
 
 * {
@@ -265,13 +266,12 @@ footer article:first-child {
 .works-portfolio::before {
   content: " ";
   position: absolute;
-  margin-top: 28px;
-  bottom: 0;
+  bottom: -25px;
   left: 0;
   width: 100%;
   height: 4px;
   background-color: var(--blue-color);
-
+  border-radius: 2px;
 }
 
 
@@ -708,8 +708,18 @@ footer .background-contacts {
   bottom: 0;
   display: flex;
   align-items: center;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
-
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(2);
+}
 .modal-window {
   position: relative;
   width: 528px;
