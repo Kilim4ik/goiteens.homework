@@ -1,6 +1,6 @@
 "use strict";
 const result = 5 + 5 + "5";
-console.log(typeof result);
+console.log(typeof result , result);
 
 const email = "lavrovskiy.danya@gmail.com";
 console.log(email.includes("@"));
