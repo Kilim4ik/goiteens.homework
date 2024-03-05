@@ -2,36 +2,34 @@
 
 const shortName = prompt("ur short name");
 const fullName = prompt("ur full name");
-if (shortName && fullName != null) {
+if (shortName != null && fullName != null) {
   alert("Обидва поля заповнені");
 } else {
   alert("Не всі поля заповненi");
 }
 
-const fstNum = prompt("Перше число");
-const sndNum = prompt("Друге число");
-if (Number(fstNum) && Number(sndNum) != NaN) {
-  const sum = Number(fstNum) + Number(sndNum);
-  if (sum > 10) {
-    alert("Сума більша за 10");
-  } else {
-    alert("Сума менша або дорівнює 10");
-  }
-} else {
-  alert("Ти бомбом? Треба було числа");
-}
-
-// чому цей код не працює?
-// const fstNum = Number(prompt("Перше число"));
-// const sndNum = Number(prompt("Друге число"));
-// if (fstNum || sndNum == NaN) {
-//   alert("Ти бомбом? Треба було числа");
-// } else if (fstNum + sndNum > 10) {
-//   alert("Сума більша за 10");
+// const fstNum = prompt("Перше число");
+// const sndNum = prompt("Друге число");
+// if (Number(fstNum) && Number(sndNum) != NaN) {
+//   const sum = Number(fstNum) + Number(sndNum);
+//   if (sum > 10) {
+//     alert("Сума більша за 10");
+//   } else {
+//     alert("Сума менша або дорівнює 10");
+//   }
 // } else {
-//   alert("Сума менша або дорівнює 10");
+//   alert("Ти бомбом? Треба було числа");
 // }
-// console.log(fstNum, sndNum);
+
+const fstNum = Number(prompt("Перше число"));
+const sndNum = Number(prompt("Друге число"));
+if (isNaN(fstNum) || isNaN(sndNum)) {
+  alert("Ти бомбом? Треба було числа");
+} else if (fstNum + sndNum > 10) {
+  alert("Сума більша за 10");
+} else {
+  alert("Сума менша або дорівнює 10");
+}
 
 let userInput = prompt("Введіть текст...");
 userInput = userInput.trim().toLocaleLowerCase();
@@ -42,7 +40,7 @@ if (userInput == "javascript") {
 }
 
 const num = Number(prompt("enter number ... "));
-if (num != NaN && num >= 10 && num <= 20) {
+if (!isNaN(num) && num >= 10 && num <= 20) {
   alert("Число входить в діапазон від 10 до 20");
 } else {
   alert("Число не входить в діапазон від 10 до 20");
@@ -52,7 +50,7 @@ const userName = prompt("ur name");
 const userMail = prompt("email");
 const userPassword = prompt("password");
 if (
-  userName.length >= 2 &&
+  userName.length >= 3 &&
   userMail.includes("@") &&
   userPassword.length >= 6
 ) {
