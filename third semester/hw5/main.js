@@ -109,48 +109,12 @@
 // }
 
 
-
-
-// const userFstNum = Number(prompt());
-// const userSndNum = Number(prompt());
-// const userMark = prompt();
-
-// switch (userFstNum) {
-//   case !isNaN(userFstNum):
-//     var outputFstNum = userFstNum;
-//     break;
-//   default:
-//     alert("помилка");
-// }
-// switch (userSndNum) {
-//   case !isNaN(userSndNum):
-//     var outputSndNum = userSndNum;
-//     break;
-
-//   default:
-//     alert("помилка");
-// }
-// switch (userMark) {
-//   case "+":
-//   case "-":
-//   case "*":
-//   case "/":
-//     var outputMark = userMark;
-//     break;
-//   default:
-//     alert("помилка");
-// }
-// const result = outputFstNum + outputMark + outputSndNum;
-// console.log(result);
-
-
-
-
 const userFstNum = Number(prompt());
 const userMark = prompt();
 const userSndNum = Number(prompt());
 
-var outputFstNum, outputSndNum, outputMark;
+let result;
+var outputFstNum, outputSndNum;
 
 switch (true) {
   case !isNaN(userFstNum):
@@ -170,31 +134,22 @@ switch (true) {
 
 switch (userMark) {
   case "+":
-    outputMark = "+";
+    result = outputFstNum + outputSndNum;
     break;
   case "-":
-    outputMark = "-";
+    result = outputFstNum - outputSndNum;
+
     break;
   case "*":
-    outputMark = "*";
+    result = outputFstNum * outputSndNum;
+
     break;
   case "/":
-    outputMark = "/";
+    result = outputFstNum / outputSndNum;
+
     break;
   default:
     alert("помилка");
-}
-
-let result;
-
-if (outputMark === "+") {
-  result = outputFstNum + outputSndNum;
-} else if (outputMark === "-") {
-  result = outputFstNum - outputSndNum;
-} else if (outputMark === "*") {
-  result = outputFstNum * outputSndNum;
-} else if (outputMark === "/") {
-  result = outputFstNum / outputSndNum;
 }
 
 alert(result);
