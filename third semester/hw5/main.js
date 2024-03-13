@@ -17,9 +17,8 @@ switch (userDrink) {
     alert(`Ви обрали ${thrdDrink}`);
     break;
   default:
-    alert('Ви не обрали замовлення');
+    alert("Ви не обрали замовлення");
 }
-
 
 const today = prompt("Сьогодні ...").trim().toLocaleLowerCase();
 console.log(today);
@@ -41,18 +40,17 @@ switch (today) {
     alert("Сьогодні не день тижня");
 }
 
-
 const userMonth = Number(prompt("Номер місяця  ... "));
 switch (userMonth) {
   case 1:
     alert("січень (зима) 30");
     break;
   case 2:
-    alert("лютий (зима) 31");
+    alert("лютий (зима) 29");
     break;
 
   case 3:
-    alert("березень (весна) 30");
+    alert("березень (весна) 31");
     break;
 
   case 4:
@@ -60,7 +58,7 @@ switch (userMonth) {
     break;
 
   case 5:
-    alert("травень (весна) 30");
+    alert("травень (весна) 31");
     break;
 
   case 6:
@@ -68,7 +66,7 @@ switch (userMonth) {
     break;
 
   case 7:
-    alert("июль (літо) 30");
+    alert("июль (літо) 31");
     break;
 
   case 8:
@@ -76,7 +74,7 @@ switch (userMonth) {
     break;
 
   case 9:
-    alert("вересень (осінь) 30");
+    alert("вересень (осінь) 31");
     break;
 
   case 10:
@@ -84,7 +82,7 @@ switch (userMonth) {
     break;
 
   case 11:
-    alert("листопад (осінь) 30");
+    alert("листопад (осінь) 31");
     break;
 
   case 12:
@@ -93,7 +91,6 @@ switch (userMonth) {
   default:
     alert("БомБом? Це не номер місяця");
 }
-
 
 const userColor = prompt().trim().toLocaleLowerCase();
 
@@ -111,27 +108,15 @@ switch (userColor) {
     alert("не той колір !");
 }
 
-
 const userFstNum = Number(prompt());
 const userMark = prompt();
 const userSndNum = Number(prompt());
 
-let result , outputFstNum, outputSndNum;
+let result, outputFstNum, outputSndNum;
 
-switch (true) {
-  case !isNaN(userFstNum):
-    outputFstNum = userFstNum;
-    break;
-  default:
-    alert("помилка");
-}
-
-switch (true) {
-  case !isNaN(userSndNum):
-    outputSndNum = userSndNum;
-    break;
-  default:
-    alert("помилка");
+if (!isNaN(userFstNum) && !isNaN(userSndNum)) {
+  outputFstNum = userFstNum;
+  outputSndNum = userSndNum;
 }
 
 switch (userMark) {
@@ -147,11 +132,15 @@ switch (userMark) {
 
     break;
   case "/":
-    result = outputFstNum / outputSndNum;
-
+    if (outputFstNum == 0 || outputSndNum == 0) {
+      alert("не можно ділити 0 або на 0 ");
+      break;
+    } else {
+      result = outputFstNum / outputSndNum;
+    }
     break;
   default:
     alert("помилка");
 }
 
-alert(result);
+// alert(result);
