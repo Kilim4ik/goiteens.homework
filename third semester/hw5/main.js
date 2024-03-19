@@ -108,38 +108,38 @@
 //     alert("не той колір !");
 // }
 
-const userFstNum = Number(prompt());
+const outputFstNum = Number(prompt());
 const userMark = prompt();
-const userSndNum = Number(prompt());
+const outputSndNum = Number(prompt());
 
-let result, outputFstNum, outputSndNum;
+let result;
 
 if (!isNaN(userFstNum) && !isNaN(userSndNum)) {
-  outputFstNum = userFstNum;
-  outputSndNum = userSndNum;
-}
-
-switch (userMark) {
-  case "+":
-    result = outputFstNum + outputSndNum;
-    break;
-  case "-":
-    result = outputFstNum - outputSndNum;
-
-    break;
-  case "*":
-    result = outputFstNum * outputSndNum;
-
-    break;
-  case "/":
-    if (outputFstNum == 0 || outputSndNum == 0) {
-      alert("не можно ділити 0 або на 0 ");
+  switch (userMark) {
+    case "+":
+      result = outputFstNum + outputSndNum;
       break;
-    } else {
-      result = outputFstNum / outputSndNum;
-    }
-    break;
-  default:
-    alert("помилка");
+
+    case "-":
+      result = outputFstNum - outputSndNum;
+
+      break;
+    case "*":
+      result = outputFstNum * outputSndNum;
+
+      break;
+    case "/":
+      if (outputSndNum == 0) {
+        alert("не можно ділити  на 0 ");
+        break;
+      } else {
+        result = outputFstNum / outputSndNum;
+      }
+      break;
+    default:
+      alert("помилка");
+      alert(result);
+  }
+} else {
+  alert("error");
 }
-outputFstNum !== 0 || outputSndNum !== 0 ? console.log('error') : alert(result);
