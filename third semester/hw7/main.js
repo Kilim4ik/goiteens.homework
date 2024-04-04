@@ -32,7 +32,7 @@ for (let i of strArray) {
 const arrayMaxNum = [
   2, 90, 45, 73, 2, 4, 8, 28, 19, 46, 28, 0, 83, 7, 3, 7, 2, 56, 36, 38, 15,
 ];
-let maxNum = 0;
+let maxNum = arrayMaxNum[0];
 for (i = 0; i < arrayMaxNum.length; i++) {
   if (maxNum < arrayMaxNum[i]) {
     maxNum = arrayMaxNum[i];
