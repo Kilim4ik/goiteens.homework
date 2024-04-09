@@ -1,14 +1,14 @@
 "use srtict";
 
-// const friends = ["Mango", "Poly", "Kiwi", "Ajax"];
+const friends = ["Mango", "Poly", "Kiwi", "Ajax"];
 
-// let string = "";
+let string = "";
 // for (let i = 0; i < friends.length; i++) {
 //   string = string + "," + friends[i];
 // }
 // console.log(string);
-// string = friends.join();
-// console.log(string);
+string = friends.join(",");
+console.log(string);
 
 const cards = [
   "Карточка-1",
