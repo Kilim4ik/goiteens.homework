@@ -12,11 +12,9 @@ const logItems = function (array) {
 
 logItems(array);
 
-// let message = prompt("...").split(" ");
 let correctArrayOfMessage = [];
 const pricePerWord = 100;
 let priceOfRing;
-// console.log(message);
 
 const calculateEngravingPrice = function (message, pricePerWord) {
   for (let word of message) {
@@ -29,9 +27,8 @@ const calculateEngravingPrice = function (message, pricePerWord) {
   alert(`Кінцева вартість ${priceOfRing}`);
 };
 
-// calculateEngravingPrice(message, pricePerWord);
+//! calculateEngravingPrice(prompt("...").split(" "), pricePerWord);
 
-// const string = prompt("...").split(" ");
 let theLongestWord = "";
 const findLongestWord = function (string) {
   for (let word of string) {
@@ -41,4 +38,58 @@ const findLongestWord = function (string) {
   }
   console.log(theLongestWord);
 };
-findLongestWord(string);
+
+//! findLongestWord(prompt("...").split(" "));
+// * Варіант через масив
+
+// const formatString = function (string) {
+//   let message = string[0];
+
+//   for (let i = 1; i < 40; i++) {
+//     message = message + string[i];
+//   }
+//   console.log(`${message}...`);
+
+//* Варіант без масиву
+
+//   if (string.length > 40) {
+//     message = string.slice(0, 40);
+//     console.log(`${message}...`);
+//   } else {
+//     console.log(string);
+//   }
+// };
+
+// !formatString(prompt().split(""));
+
+const checkForSpam = function (message) {
+  for (let i = 0; i < message.length; i++) {
+    if (message[i] === "spam" || message[i] === "sale") {
+      console.log(true);
+      break;
+    } else console.log(false);
+  }
+};
+//! checkForSpam(prompt().toLocaleLowerCase().split(" "));
+
+let input;
+const numbers = [];
+let total = 0;
+const sum = function (array) {
+  for (let num of array) {
+    total = total + num;
+  }
+  alert(`Загальна сума чисел дорівнює ${total}`);
+};
+while (true) {
+  input = prompt("!!!");
+  if (input == null) {
+    sum(numbers);
+    break;
+  } else if (isNaN(Number(input))) {
+    continue;
+  } else {
+    numbers.push(Number(input));
+  }
+}
+console.log(numbers);
