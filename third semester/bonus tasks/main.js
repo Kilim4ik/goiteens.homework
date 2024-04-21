@@ -62,7 +62,7 @@ const findLogin = (userLogin, arrayOfLogins) => {
     }
   }
 };
-findLogin(loginToFind, logins);
+//! findLogin(loginToFind, logins);
 
 const writeSmallesNum = () => {
   while (true) {
@@ -89,14 +89,16 @@ const findSmallesNumber = (numbers) => {
   }
   alert(`Найменшим числом є - ${theSmallestNum}`);
 };
-writeSmallesNum();
+//! writeSmallesNum();
 
-// let userTxt = prompt("txt").toLocaleLowerCase();
-
-const sum = (a, b) => {
-  if (isNaN(a) || isNaN(b)) {
-    return;
+//! let userTxt = prompt("txt").toLocaleLowerCase().split(" ");
+let arr = [];
+const createURL = (txt) => {
+  for (let elem of txt) {
+    if (elem) {
+      arr.push(elem);
+    }
   }
-  return a + b;
+  console.log(arr.join("-"));
 };
-console.log(sum(Number(prompt()), Number(prompt())));
+createURL(userTxt);
