@@ -47,22 +47,20 @@ logItems(["клавиатура", "наушники", "часы"]);
 const logins = ["m4ngoDoge", "k1widab3st", "poly1scute", "aj4xth3m4n"];
 const loginToFind = "aj4xth3m4n";
 const findLogin = (userLogin, arrayOfLogins) => {
-  let i = 0;
+  let message;
   for (let login of arrayOfLogins) {
     if (login === userLogin) {
-      console.log(`Користувач ${userLogin} знайдено`);
+      message = `Користувач ${userLogin}  знайдено`;
+
+      message;
+      break;
     } else {
-      while (true) {
-        i++;
-        break;
-      }
-      if (i == arrayOfLogins.length) {
-        console.log(`Користувач ${userLogin} не знайдено`);
-      }
+      message = `Користувач ${userLogin} не знайдено`;
     }
   }
+  alert(message);
 };
-//! findLogin(loginToFind, logins);
+findLogin(loginToFind, logins);
 
 const writeSmallesNum = () => {
   while (true) {
@@ -79,9 +77,8 @@ const writeSmallesNum = () => {
   return numbers;
 };
 
-let theSmallestNum;
 const findSmallesNumber = (numbers) => {
-  theSmallestNum = numbers[0];
+  let theSmallestNum = numbers[0];
   for (let num of numbers) {
     if (theSmallestNum > num) {
       theSmallestNum = num;
@@ -91,9 +88,13 @@ const findSmallesNumber = (numbers) => {
 };
 //! writeSmallesNum();
 
-//! let userTxt = prompt("txt").toLocaleLowerCase().split(" ");
-let arr = [];
-const createURL = (txt) => {
+const createURL = () => {
+  const txt = prompt("txt").toLocaleLowerCase().split(" ");
+
+  //* перебір був по словам
+  // console.log(txt);
+
+  let arr = [];
   for (let elem of txt) {
     if (elem) {
       arr.push(elem);
@@ -101,4 +102,4 @@ const createURL = (txt) => {
   }
   console.log(arr.join("-"));
 };
-createURL(userTxt);
+// !createURL();
