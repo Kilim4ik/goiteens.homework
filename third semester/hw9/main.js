@@ -29,14 +29,14 @@ const calculateEngravingPrice = function (message, pricePerWord) {
 // !calculateEngravingPrice(prompt("..."), pricePerWord);
 
 const findLongestWord = function (string) {
-  let theLongestWord = string[0];
+  let longWord = string[0];
   const arrayFromString = string.split(" ");
   for (let word of arrayFromString) {
-    if (theLongestWord.length < word.length) {
-      theLongestWord = word;
+    if (longWord.length < word.length) {
+      longWord = word;
     }
   }
-  return theLongestWord;
+  return longWord;
 };
 
 //! console.log(findLongestWord(prompt("...")));
@@ -69,7 +69,6 @@ const checkForSpam = function (message) {
   for (let i = 0; i < arrayFromMessage.length; i++) {
     if (arrayFromMessage[i] === "spam" || arrayFromMessage[i] === "sale") {
       return true;
-      break;
     } else return false;
   }
 };
