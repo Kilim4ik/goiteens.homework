@@ -5,10 +5,11 @@ const bankAccount = {
   accountNumber: 1,
   balance: 1,
 };
+const num = Number(prompt("///"));
+
 bankAccount.deposit = (num) => {
-  num = Number(prompt("///"));
   if (isNaN(num)) {
-    this.deposit();
+    return;
   }
   bankAccount.balance += num;
   //? чому не прауює через this ?
@@ -17,14 +18,14 @@ bankAccount.deposit = (num) => {
 bankAccount.withdraw = (num) => {
   num = Number(prompt("///"));
   if (isNaN(num)) {
-    this.withdraw();
+    return;
   }
   bankAccount.balance -= num;
   //? чому не прауює через this ?
   // this.balance += num;
 };
-//! bankAccount.withdraw();
-//! bankAccount.deposit();
+//! bankAccount.withdraw(num);
+// !bankAccount.deposit(num);
 console.log(bankAccount);
 
 // const temperature = Number(prompt("///"));
