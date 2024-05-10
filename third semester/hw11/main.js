@@ -27,31 +27,25 @@ bankAccount.withdraw = (num) => {
 //! bankAccount.deposit();
 console.log(bankAccount);
 
-//! const temperature = Number(prompt("///"));
+// const temperature = Number(prompt("///"));
 const weather = {
-  //   temperature,
+  // temperature,
   humidity: 1,
   windSpeed: 1,
 };
-const isUpper0 = (temp) => {
-  if (temp >= 0) {
-    return true;
-  } else {
-    return false;
-  }
-};
+const isUpper0 = () => weather.temperature >= 0;
 
 weather.alert = (callback) => {
-  if (callback == true) {
+  if (callback) {
     alert(">0");
   } else {
     alert("<0");
   }
 };
-// !weather.alert(isUpper0(weather.temperature));
+// !weather.alert(isUpper0());
 const introducedName = "i";
 //! const introducedEmail = prompt("email");
-// !const introducedPassword = prompt("password");
+//! const introducedPassword = prompt("password");
 const user = {
   name: "i",
   email: "email",
@@ -61,15 +55,17 @@ user.login = (email, password) => {
   if (email !== introducedEmail) {
     alert(`${introducedEmail} не знайдено `);
     return false;
-  } else if (password !== introducedPassword) {
+  }
+  if (password !== introducedPassword) {
     alert(`${introducedPassword} - не правильний пароль`);
     return false;
-  } else {
+  }
+  if (email == introducedEmail && password == introducedPassword) {
     alert("приємного користування!");
     return true;
   }
 };
-//! user.login(user.email, user.password);
+// !user.login(user.email, user.password);
 
 const movie = {
   title: "a",
@@ -77,13 +73,7 @@ const movie = {
   year: 2022,
   rating: 8,
 };
-movie.isOK = () => {
-  if (movie.rating > 8) {
-    return true;
-  } else {
-    return false;
-  }
-};
+movie.isOK = () => movie.rating > 8;
 const ifMovieOK = (callback) => {
   if (callback) {
     alert(`u should watching the ${movie.title}`);
