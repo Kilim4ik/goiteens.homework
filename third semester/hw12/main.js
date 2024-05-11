@@ -10,21 +10,13 @@ user.mood = "happy";
 user.hobby = "skydiving";
 user.premium = false;
 
-const calcUserStat = (obj) => {
+const showUserStat = (obj) => {
   const userKeys = Object.keys(user);
-  const newArr = [];
-  for (let key of userKeys) {
-    newArr.push(key);
-  }
-  return newArr;
-};
-
-const showUserStat = (obj, callbak) => {
-  for (let elem of callbak) {
+  for (let elem of userKeys) {
     console.log(`${elem} : ${user[elem]}`);
   }
 };
-// ! showUserStat(user, calcUserStat(user));
+! showUserStat(user);
 
 const countProps = (obj) => Object.entries(obj).length;
 console.log(countProps({})); // 0
@@ -78,7 +70,6 @@ const countTotalSalary = (employees) => {
   return total;
 };
 
-
 console.log(countTotalSalary({})); // 0
 
 console.log(
@@ -112,7 +103,6 @@ const getAllPropValues = (arr, prop) => {
   return newArr;
 };
 
-
 console.log(getAllPropValues(products, "name")); // ['Радар', 'Сканер', 'Дроїд', 'Захоплення']
 
 console.log(getAllPropValues(products, "quantity")); // [4, 3, 7, 2]
@@ -127,67 +117,64 @@ const calculateTotalPrice = function (allProdcuts, productName) {
   }
 };
 
-
 console.log(calculateTotalPrice(products, "Радар")); // 5200
 
 console.log(calculateTotalPrice(products, "Дроїд"));
 
-
-
 const Transaction = {
-    DEPOSIT: 'deposit',
-    WITHDRAW: 'withdraw',
-  };
-  
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
+};
+
+/*
+ * Кожна транзакція - це об'єкт з властивостями: id, type і amount
+ */
+
+const account = {
+  // Поточний баланс рахунку
+  balance: 0,
+
+  // Історія транзакцій
+  transactions: [],
+
   /*
-   * Кожна транзакція - це об'єкт з властивостями: id, type і amount
+   * Метод створює і повертає об'єкт транзакції.
+   * Приймає суму і тип транзакції.
    */
-  
-  const account = {
-    // Поточний баланс рахунку
-    balance: 0,
-  
-    // Історія транзакцій
-    transactions: [],
-  
-    /*
-     * Метод створює і повертає об'єкт транзакції.
-     * Приймає суму і тип транзакції.
-     */
-    createTransaction(amount, type) {},
-  
-    /*
-     * Метод відповідає за додавання суми до балансу.
-     * Приймає суму танзакції.
-     * Викликає createTransaction для створення об'єкта транзакції
-     * після чого додає його в історію транзакцій
-     */
-    deposit(amount) {},
-  
-    /*
-     * Метод відповідає за зняття суми з балансу.
-     * Приймає суму танзакції.
-     * Викликає createTransaction для створення об'єкта транзакції
-     * після чого додає його в історію транзакцій.
-     *
-     * Якщо amount більше, ніж поточний баланс, виводь повідомлення
-     * про те, що зняття такої суми не можливо, недостатньо коштів.
-     */
-    withdraw(amount) {},
-  
-    /*
-     * Метод повертає поточний баланс
-     */
-    getBalance() {},
-  
-    /*
-     * Метод шукає і повертає об'єкт транзакції по id
-     */
-    getTransactionDetails(id) {},
-  
-    /*
-     * Метод повертає кількість коштів
-     * певного типу транзакції з усієї історії транзакцій
-     */
-    getTransactionTotal(type) {},
-  };
+  createTransaction(amount, type) {},
+
+  /*
+   * Метод відповідає за додавання суми до балансу.
+   * Приймає суму танзакції.
+   * Викликає createTransaction для створення об'єкта транзакції
+   * після чого додає його в історію транзакцій
+   */
+  deposit(amount) {},
+
+  /*
+   * Метод відповідає за зняття суми з балансу.
+   * Приймає суму танзакції.
+   * Викликає createTransaction для створення об'єкта транзакції
+   * після чого додає його в історію транзакцій.
+   *
+   * Якщо amount більше, ніж поточний баланс, виводь повідомлення
+   * про те, що зняття такої суми не можливо, недостатньо коштів.
+   */
+  withdraw(amount) {},
+
+  /*
+   * Метод повертає поточний баланс
+   */
+  getBalance() {},
+
+  /*
+   * Метод шукає і повертає об'єкт транзакції по id
+   */
+  getTransactionDetails(id) {},
+
+  /*
+   * Метод повертає кількість коштів
+   * певного типу транзакції з усієї історії транзакцій
+   */
+  getTransactionTotal(type) {},
+};
