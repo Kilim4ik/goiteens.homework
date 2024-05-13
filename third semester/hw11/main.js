@@ -5,27 +5,24 @@ const bankAccount = {
   accountNumber: 1,
   balance: 1,
 };
-const num = Number(prompt("///"));
+// const num = Number(prompt("///"));
 
-bankAccount.deposit = (num) => {
+bankAccount.deposit = function (num) {
   if (isNaN(num)) {
     return;
   }
   bankAccount.balance += num;
-  //? чому не прауює через this ?
-  // this.balance += num;
-};
-bankAccount.withdraw = (num) => {
-  num = Number(prompt("///"));
+}.bind(bankAccount);
+bankAccount.withdraw = function (num) {
   if (isNaN(num)) {
     return;
   }
   bankAccount.balance -= num;
-  //? чому не прауює через this ?
-  // this.balance += num;
-};
-//! bankAccount.withdraw(num);
+}.bind(bankAccount);
+
+// !bankAccount.withdraw(num);
 // !bankAccount.deposit(num);
+
 console.log(bankAccount);
 
 // const temperature = Number(prompt("///"));
@@ -33,17 +30,20 @@ const weather = {
   // temperature,
   humidity: 1,
   windSpeed: 1,
+  isUpper0() {
+    return this.temperature >= 0;
+  },
 };
-const isUpper0 = () => weather.temperature >= 0;
+console.log(weather);
 
-weather.alert = (callback) => {
+const alertIsUpper = (callback) => {
   if (callback) {
     alert(">0");
   } else {
     alert("<0");
   }
 };
-// !weather.alert(isUpper0());
+//! alertIsUpper(weather.isUpper0());
 const introducedName = "i";
 //! const introducedEmail = prompt("email");
 //! const introducedPassword = prompt("password");
@@ -61,10 +61,9 @@ user.login = (email, password) => {
     alert(`${introducedPassword} - не правильний пароль`);
     return false;
   }
-  if (email == introducedEmail && password == introducedPassword) {
-    alert("приємного користування!");
-    return true;
-  }
+
+  alert("приємного користування!");
+  return true;
 };
 // !user.login(user.email, user.password);
 
