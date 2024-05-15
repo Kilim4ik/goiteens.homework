@@ -9,14 +9,14 @@ const user = {
 user.mood = "happy";
 user.hobby = "skydiving";
 user.premium = false;
-
+const { name, age, hobby, premium, mood } = user;
 const showUserStat = (obj) => {
   const userKeys = Object.keys(user);
   for (let elem of userKeys) {
     console.log(`${elem} : ${user[elem]}`);
   }
 };
-!showUserStat(user);
+// !showUserStat(user);
 
 const countProps = (obj) => Object.entries(obj).length;
 console.log(countProps({})); // 0
@@ -94,6 +94,7 @@ const products = [
   { name: "Дроїд", price: 400, quantity: 7 },
   { name: "Захоплення", price: 1200, quantity: 2 },
 ];
+const { prodName, price, quantity } = products;
 
 const getAllPropValues = (arr, prop) => {
   const newArr = [];
@@ -111,8 +112,8 @@ console.log(getAllPropValues(products, "category")); // []
 
 const calculateTotalPrice = function (allProdcuts, productName) {
   for (let product of allProdcuts) {
-    if (product["name"] == productName) {
-      return product["price"] * product["quantity"];
+    if (prodName == productName) {
+      return price * quantity;
     }
   }
 };
@@ -126,45 +127,44 @@ const Transaction = {
   WITHDRAW: "withdraw",
 };
 
-
-const idTransaction = Number(prompt("idTransaction"));
+// const idTransaction = Number(prompt("idTransaction"));
 
 const account = {
-  balance: 0,
+  balance: 10,
   transactions: [],
 
   createTransaction(amount, type) {
     switch (type) {
       case "withdraw":
-        account.withdraw(amount);
+        withdraw(amount);
         break;
       case "deposit":
-        account.deposit(amount);
+        deposit(amount);
         break;
     }
-    account.transactions.push({
+    transactions.push({
       amount,
       type,
-      id: account.transactions.length + 1,
+      id: transactions.length + 1,
     });
   },
 
   deposit(amount) {
-    account.balance += amount;
+    balance += amount;
   },
 
   withdraw(amount) {
-    if (account.balance > amount) {
-      account.balance -= amount;
+    if (balance > amount) {
+      balance -= amount;
     }
   },
 
   getBalance() {
-    alert(account.balance);
+    alert(balance);
   },
 
   getTransactionDetails(id) {
-    for (let transaction of account.transactions) {
+    for (let transaction of transactions) {
       const transactionValue = Object.values(transaction);
       if (id == transactionValue[2]) {
         console.log(transaction);
@@ -175,7 +175,7 @@ const account = {
   getTransactionTotal(type) {
     let total = 0;
 
-    for (let transaction of account.transactions) {
+    for (let transaction of transactions) {
       const transactionValue = Object.values(transaction);
       if (type == transactionValue[1]) {
         total += transactionValue[0];
@@ -184,11 +184,19 @@ const account = {
     console.log(total);
   },
 };
-//! account.createTransaction(200, "deposit");
+let {
+  balance,
+  transactions,
+  createTransaction,
+  deposit,
+  withdraw,
+  getBalance,
+  getTransactionDetails,
+  getTransactionTotal,
+} = account;
 
-//! account.createTransaction(100, "withdraw");
-//! account.getTransactionDetails(idTransaction);
-// console.log("-------");
-//! account.getTransactionTotal("withdraw");
-//! console.log(account.transactions);
-//! console.log(account.balance);
+createTransaction(1, "withdraw");
+getTransactionDetails(1);
+getTransactionTotal("withdraw");
+getBalance();
+// console.log(transactions);
