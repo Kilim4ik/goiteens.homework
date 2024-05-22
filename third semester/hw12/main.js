@@ -94,7 +94,10 @@ const products = [
   { name: "Дроїд", price: 400, quantity: 7 },
   { name: "Захоплення", price: 1200, quantity: 2 },
 ];
-const { prodName, price, quantity } = products;
+for (let obj of products) {
+  const { name, price, quantity } = obj;
+  console.log(name, price, quantity);
+}
 
 const getAllPropValues = (arr, prop) => {
   const newArr = [];
@@ -111,8 +114,8 @@ console.log(getAllPropValues(products, "quantity")); // [4, 3, 7, 2]
 console.log(getAllPropValues(products, "category")); // []
 
 const calculateTotalPrice = function (allProdcuts, productName) {
-  for (let product of allProdcuts) {
-    if (prodName == productName) {
+  for (let { name, price, quantity } of allProdcuts) {
+    if (name == productName) {
       return price * quantity;
     }
   }
@@ -127,76 +130,73 @@ const Transaction = {
   WITHDRAW: "withdraw",
 };
 
-// const idTransaction = Number(prompt("idTransaction"));
-
 const account = {
   balance: 10,
   transactions: [],
 
   createTransaction(amount, type) {
-    switch (type) {
-      case "withdraw":
-        withdraw(amount);
-        break;
-      case "deposit":
-        deposit(amount);
-        break;
-    }
-    transactions.push({
+    this.transactions.push({
       amount,
       type,
-      id: transactions.length + 1,
+      id: this.transactions.length + 1,
     });
   },
 
   deposit(amount) {
-    balance += amount;
+    this.balance += amount;
+    this.createTransaction(amount, "deposit");
   },
 
   withdraw(amount) {
-    if (balance > amount) {
-      balance -= amount;
+    if (this.balance > amount) {
+      this.balance -= amount;
     }
+    this.createTransaction(amount, "withdraw");
   },
 
   getBalance() {
-    alert(balance);
+    alert(this.balance);
   },
 
-  getTransactionDetails(id) {
-    for (let transaction of transactions) {
-      const transactionValue = Object.values(transaction);
-      if (id == transactionValue[2]) {
-        console.log(transaction);
-      }
+  getTransactionDetails(userID) {
+    for (let transaction of this.transactions) {
+      const { id } = transaction;
+      if (userID == id) console.log(transaction);
     }
   },
 
-  getTransactionTotal(type) {
+  getTransactionTotal(userType) {
     let total = 0;
 
-    for (let transaction of transactions) {
-      const transactionValue = Object.values(transaction);
-      if (type == transactionValue[1]) {
-        total += transactionValue[0];
+    for (let { type, amount } of this.transactions) {
+      if (userType == type) {
+        total += amount;
       }
     }
     console.log(total);
   },
 };
-let {
-  balance,
-  transactions,
-  createTransaction,
-  deposit,
-  withdraw,
-  getBalance,
-  getTransactionDetails,
-  getTransactionTotal,
-} = account;
 
-createTransaction(1, "withdraw");
-getTransactionDetails(1);
-getTransactionTotal("withdraw");
-getBalance();
+// let {
+//   balance,
+//   transactions,
+//   createTransaction,
+//   deposit,
+//   withdraw,
+//   getBalance,
+//   getTransactionDetails,
+//   getTransactionTotal,
+// } = account;
+
+account.deposit(100);
+account.deposit(10);
+account.withdraw(60);
+account.withdraw(40);
+account.deposit(200);
+account.deposit(130);
+account.withdraw(100);
+
+account.getTransactionDetails(1);
+account.getTransactionTotal("withdraw");
+// account.getBalance();
 // console.log(transactions);
