@@ -116,21 +116,32 @@ const getInactiveUsers = users.map(({ name, isActive }) => {
 console.log(getInactiveUsers);
 
 const emailForCheck = "sharlenebush@tubesys.com";
-const getUserWithEmail = users.find(
-  ({ email }, emailForCheck) => email === emailForCheck
-);
+const getUserWithEmail = users.find(({ email }) => email === emailForCheck);
 console.log(getUserWithEmail);
 
 const min = 30;
 const max = 100;
-const getUsersWithAge = users.filter(
-  ({ name, age }) => age >= min && age <= max
-  //   if (age >= min && age <= max) return name;
-);
+const getUsersWithAge = users.filter(({ age }) => age >= min && age <= max);
 console.log(getUsersWithAge);
 
-let total = 0;
-const calculateTotalBalance = users.forEach(
-  ({ balance }) => (total += balance)
-);
-console.log(total);
+const calculateTotalBalance = users.reduce((total, { balance }) => {
+  total += balance;
+  return total;
+}, 0);
+console.log(calculateTotalBalance);
+
+const friendForCheck = "Briana Decker";
+const getUsersWithFriend = users.reduce((acc, { name, friends }) => {
+  friends.forEach((friendName) => {
+    if (friendName === friendForCheck) {
+      //   acc.push(name);
+    }
+  });
+}, []);
+// console.log(getUsersWithFriend);
+
+// const getNamesSortedByFriendsCount = users.map(({ name, friends }) => {
+//   if (Math.max(friends.length)) name;
+// }, 0);
+// const getNamesSortedByFriendsCount = users.reduce(( acc , { name, friends }) => );
+// console.log(getNamesSortedByFriendsCount);
