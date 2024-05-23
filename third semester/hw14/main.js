@@ -105,14 +105,12 @@ const getUsersWithEyeColor = users.filter((user) => {
 console.log(getUsersWithEyeColor);
 
 const genderForCheck = "male";
-const getUsersWithGender = users.map(({ name, gender }) => {
-  if (gender == genderForCheck) return name;
-});
+const getUsersWithGender = users.filter(
+  ({ gender }) => gender == genderForCheck
+);
 console.log(getUsersWithGender);
 
-const getInactiveUsers = users.map(({ name, isActive }) => {
-  if (!isActive) return name;
-});
+const getInactiveUsers = users.filter(({ isActive }) => !isActive);
 console.log(getInactiveUsers);
 
 const emailForCheck = "sharlenebush@tubesys.com";
