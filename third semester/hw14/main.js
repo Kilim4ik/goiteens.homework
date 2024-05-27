@@ -130,16 +130,15 @@ console.log(calculateTotalBalance);
 
 const friendForCheck = "Briana Decker";
 const getUsersWithFriend = users.reduce((acc, { name, friends }) => {
-  friends.forEach((friendName) => {
-    if (friendName === friendForCheck) {
-      //   acc.push(name);
-    }
-  });
+  if (friends.includes(friendForCheck)) {
+    acc.push(name);
+  }
+  return acc;
 }, []);
-// console.log(getUsersWithFriend);
+console.log(getUsersWithFriend);
 
-// const getNamesSortedByFriendsCount = users.map(({ name, friends }) => {
-//   if (Math.max(friends.length)) name;
-// }, 0);
-// const getNamesSortedByFriendsCount = users.reduce(( acc , { name, friends }) => );
+// const getNamesSortedByFriendsCount = users.reduce(
+//   (acc, { name, friends }) => name,
+//   0
+// );
 // console.log(getNamesSortedByFriendsCount);
