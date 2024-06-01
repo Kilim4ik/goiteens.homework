@@ -137,8 +137,14 @@ const getUsersWithFriend = users.reduce((acc, { name, friends }) => {
 }, []);
 console.log(getUsersWithFriend);
 
-// const getNamesSortedByFriendsCount = users.reduce(
-//   (acc, { name, friends }) => name,
-//   0
-// );
-// console.log(getNamesSortedByFriendsCount);
+const getNamesSortedByFriendsCount = users.sort(
+  (min, max) => max.friends.length - min.friends.length
+);
+console.log(getNamesSortedByFriendsCount);
+
+//! ідея - https://www.youtube.com/watch?v=mCIRO7gCuEk&ab_channel=WebDev%D1%81%D0%BD%D1%83%D0%BB%D1%8F.%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%9B%D1%83%D1%89%D0%B5%D0%BD%D0%BA%D0%BE
+const getSortedUniqueSkills = users
+  .map(({ skills }) => skills)
+  .reduce((acc, arr) => acc.concat(arr), [])
+  .reduce((acc, skil) => (acc.includes(skil) ? acc : [...acc, skil]), []);
+console.log(getSortedUniqueSkills);
