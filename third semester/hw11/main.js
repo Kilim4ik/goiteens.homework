@@ -11,13 +11,13 @@ bankAccount.deposit = function (num) {
   if (isNaN(num)) {
     return;
   }
-  bankAccount.balance += num;
+  this.balance += num;
 }.bind(bankAccount);
 bankAccount.withdraw = function (num) {
-  if (isNaN(num)) {
+  if (isNaN(num) || num > this.balance) {
     return;
   }
-  bankAccount.balance -= num;
+  this.balance -= num;
 }.bind(bankAccount);
 
 // !bankAccount.withdraw(num);
