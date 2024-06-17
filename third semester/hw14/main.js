@@ -91,23 +91,20 @@ console.log(getUserNames);
 
 // let color = prompt("color");
 const color = "brown";
-// const getUsersWithGender = users.map((users) => {
-//   if (color == users.eyeColor) return { users: users.name };
-// });
-// console.log(getUsersWithGender);
-
-const getUsersWithEyeColor = users.filter((user) => {
-  if (user.eyeColor == color) {
-    return user.name;
-    //? чому не поверає імʼя , а повертає obj ?
-  }
-});
+const getUsersWithEyeColor = users
+  .map((user) => {
+    if (color == user.eyeColor) return user.name;
+  })
+  .filter((user) => user != undefined);
 console.log(getUsersWithEyeColor);
 
 const genderForCheck = "male";
-const getUsersWithGender = users.filter(
-  ({ gender }) => gender == genderForCheck
-);
+const getUsersWithGender = users
+  .map((user) => {
+    if (genderForCheck == user.gender) return user.name;
+  })
+  .filter((user) => user != undefined);
+
 console.log(getUsersWithGender);
 
 const getInactiveUsers = users.filter(({ isActive }) => !isActive);
@@ -138,7 +135,7 @@ const getUsersWithFriend = users.reduce((acc, { name, friends }) => {
 console.log(getUsersWithFriend);
 
 const getNamesSortedByFriendsCount = users.sort(
-  (min, max) => max.friends.length - min.friends.length
+  (min, max) => min.friends.length - max.friends.length
 );
 console.log(getNamesSortedByFriendsCount);
 
