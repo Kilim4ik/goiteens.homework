@@ -85,7 +85,9 @@ console.table(storage.items); // [ "Нанітоіди", "Залізні жуп�
 
 class StringBuilder {
   _value = ".";
-  str;
+  get value() {
+    return this._value;
+  }
   append(str) {
     this._value = this._value + str;
   }
@@ -95,9 +97,6 @@ class StringBuilder {
   pad(str) {
     this.append(str);
     this.prepend(str);
-  }
-  get value() {
-    return this._value;
   }
 }
 const builder = new StringBuilder(".");
@@ -115,7 +114,7 @@ console.log(builder.value); // '=^.^='
 console.log("!!!!!!!!!!!!!!!!!!!!!!!");
 class Car {
   speed;
-  price;
+  #price;
   maxSpeed;
   isOn;
   distance;
@@ -126,7 +125,7 @@ class Car {
 
   constructor({ speed = 0, price, maxSpeed, isOn = false, distance = 0 }) {
     this.speed = speed;
-    this.price = price;
+    this.#price = price;
     this.maxSpeed = maxSpeed;
     this.isOn = isOn;
     this.distance = distance;
@@ -137,10 +136,10 @@ class Car {
    * який буде працювати з властивістю ціни автомобіля.
    */
   get price() {
-    return this.price;
+    return this.#price;
   }
   set price(newPrice) {
-    this.price = newPrice;
+    this.#price = newPrice;
   }
 
   turnOn() {
