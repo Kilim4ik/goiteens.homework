@@ -32,3 +32,18 @@ console.log(string);
 
 // cards.splice(cards.indexOf(cardIoUpdate), 1, "Карточка-нова");
 // console.log(cards);
+
+const friends = [
+  { name: "Mango", online: false },
+  { name: "Kiwi", online: true },
+  { name: "Poly", online: false },
+  { name: "Ajax", online: false },
+];
+const getAllNames = (arr) => {
+  let newArr = [];
+  for (let elem of arr) {
+    newArr.push(elem.name);
+  }
+  return newArr;
+};
+!console.log(getAllNames(friends));
