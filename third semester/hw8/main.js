@@ -1,18 +1,18 @@
 "use srtict";
 
-// const friends = ["Mango", "Poly", "Kiwi", "Ajax"];
+const friends = ["Mango", "Poly", "Kiwi", "Ajax"];
 
-// let string = "";
-// for (let i = 0; i < friends.length; i++) {
-//   if (i < friends.length - 1) {
-//     string += friends[i] + ",";
-//   } else {
-//     string += friends[i];
-//   }
-// }
-// console.log(string);
-// string = friends.join(",");
-// console.log(string);
+let string = "";
+for (let i = 0; i < friends.length; i++) {
+  if (i < friends.length - 1) {
+    string += friends[i] + ",";
+  } else {
+    string += friends[i];
+  }
+}
+console.log(string);
+string = friends.join(",");
+console.log(string);
 
 // const cards = [
 //   "Карточка-1",
@@ -32,6 +32,7 @@
 
 // cards.splice(cards.indexOf(cardIoUpdate), 1, "Карточка-нова");
 // console.log(cards);
+
 const friends = [
   { name: "Mango", online: false },
   { name: "Kiwi", online: true },
