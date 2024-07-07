@@ -1,5 +1,6 @@
 "use strict";
 
+
 function Account({ login, email }) {
   this.login = login;
   this.email = email;
@@ -20,6 +21,7 @@ const poly1 = new Account({
   email: "poly@mail.com",
 });
 poly1.getInfo(); // Login: Poly, Email: poly@mail.com
+
 
 class User {
   name;
@@ -85,9 +87,11 @@ console.table(storage.items); // [ "Нанітоіди", "Залізні жуп�
 
 class StringBuilder {
   _value = ".";
+
   get value() {
     return this._value;
   }
+
   append(str) {
     this._value = this._value + str;
   }
@@ -98,6 +102,7 @@ class StringBuilder {
     this.append(str);
     this.prepend(str);
   }
+
 }
 const builder = new StringBuilder(".");
 
