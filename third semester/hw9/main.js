@@ -24,6 +24,7 @@ const calculateEngravingPrice = function (message, pricePerWord) {
       correctArrayOfMessage.push(word);
     }
   }
+
   priceOfRing = correctArrayOfMessage.length * pricePerWord;
   return priceOfRing;
   //* alert(`Кінцева вартість ${priceOfRing}`);
@@ -79,20 +80,18 @@ const checkForSpam = function (message) {
 
 let input;
 const num = [];
-
 let total = 0;
 const sum = function (array) {
   for (let num of array) {
     total = total + num;
   }
 
-  alert(`Загальна сума чисел дорівнює ${total}`);
+  return total;
 
 };
 while (true) {
   input = prompt("!!!");
   if (input == null) {
-
     sum(num);
 
     break;
