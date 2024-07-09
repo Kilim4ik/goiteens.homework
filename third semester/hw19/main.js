@@ -22,3 +22,32 @@ for (let elem of arrEvent) {
   );
 }
 console.log(document.querySelectorAll("[type='radio']"));
+
+const userName = document.querySelector("#name-output");
+const userNameInput = document.querySelector("#name-input");
+userNameInput.addEventListener("input", () => {
+  userName.innerHTML = userNameInput.value;
+});
+
+const validation = document.querySelector("#validation-input");
+validation.addEventListener("blur", () => isValid());
+function isValid() {
+  if (validation.value.length == validation.dataset.length) {
+    validation.classList.remove("invalid");
+    validation.classList.add("valid");
+  } else {
+    validation.classList.remove("valid");
+    validation.classList.add("invalid");
+  }
+}
+console.log(validation);
+
+const control = document.querySelector("#font-size-control");
+let size = 14;
+
+control.addEventListener("change", () => {
+  size = document.querySelector("#font-size-control").value;
+  document.querySelector("#text").style.fontSize = `${size}px`;
+  //   document.querySelector("#text").style.color = "red";
+  //   console.log(size);
+});
