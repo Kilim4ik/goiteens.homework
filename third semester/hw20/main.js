@@ -23,6 +23,7 @@ function next() {
 }
 function prev() {
   if (galleryIndex == 0) {
+    arrLI[0].classList.remove("full-image");
     galleryIndex = arrLI.length - 1;
     arrLI[galleryIndex].classList.add("full-image");
   } else {
