@@ -1,0 +1,16 @@
+{
+  "name": "hw4",
+  "version": "1.0.0 beta",
+  "main": "index.js",
+  "scripts": {
+    "test": "node package.json"
+  },
+  "keywords": [],
+  "author": "Danya Lavrovskiy",
+  "license": "ISC",
+
+  "description": "homework",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
