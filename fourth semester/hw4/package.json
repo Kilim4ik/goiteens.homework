@@ -11,5 +11,8 @@
   "description": "homework",
   "dependencies": {
     "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }
