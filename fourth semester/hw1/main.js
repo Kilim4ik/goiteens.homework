@@ -69,7 +69,10 @@ let str = ``;
 const gallery = document.querySelector(".gallery");
 galleryItems.forEach((photo) => {
   str += `<li class="gallery__item">
-
+  <a
+    class="gallery__link"
+    href="${photo.original}"
+  ></a>
     <img
       class="gallery__image"
       src="${photo.preview}"
@@ -104,4 +107,3 @@ const closeModal = () => {
     if (targetName == "Escape") modalWindow.classList.remove("is-open");
   });
 };
-
