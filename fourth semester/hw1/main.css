@@ -56,7 +56,7 @@
   
   .gallery__link {
 
-    display: block;
+    /* display: block; */
     display: none;
     text-decoration: none;
     height: 100%;
