@@ -55,12 +55,13 @@ const users = [
     photo: null,
   },
 ];
-import menuTemplate from "./template.hbs";
 
-console.log(typeof menuTemplate);
-// const userTemblate = {
-//   title: "our users",
-//   users: users,
-// };
-// const markup = menuTemplate(userTemblate);
-// document.querySelector(".users-section").innerHTML = markup;
+// import menuTemplate from "./template.hbs";
+console.log(11);
+console.log(menuTemplate);
+const userTemblate = {
+  title: "our users",
+  users: users,
+};
+const markup = menuTemplate(userTemblate);
+document.querySelector(".users-section").innerHTML = markup;
