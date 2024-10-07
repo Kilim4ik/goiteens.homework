@@ -56,12 +56,13 @@ const users = [
   },
 ];
 
-// import menuTemplate from "./template.hbs";
-console.log(11);
-console.log(menuTemplate);
+import tmp from "./template.hbs";
+
 const userTemblate = {
   title: "our users",
   users: users,
 };
-const markup = menuTemplate(userTemblate);
+
+// const markup = tmp(userTemblate);
+const markup = tmp({ userTemblate });
 document.querySelector(".users-section").innerHTML = markup;
