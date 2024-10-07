@@ -7,13 +7,7 @@ input.addEventListener(
   "input",
   _.debounce((e) => {
     const val = e.target.value;
-    if (val > 50)
-      img.style.transform = `scale(${1 + (val - 50) / 100}
-    )`;
-    else if (val < 50)
-      img.style.transform = `scale(${val / 100}
-    )`;
-    else img.style.transform = "scale(1)";
+    img.style.transform = `scale(${1 + (val - 50) / 100}`;
   }, 1000)
 );
 
