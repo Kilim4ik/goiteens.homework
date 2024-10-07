@@ -1,0 +1,22 @@
+.block {
+  width: 10px;
+  height: 10px;
+  transition: all 1s ease-in;
+  border: 1px solid black;
+  position: absolute;
+  top: 400px;
+  left: 500px;
+}
+.aim-game__field {
+  width: 70%;
+  height: 50vh;
+  border: 2px solid black;
+  position: relative;
+}
+
+.aim-game__target {
+  width: 2%;
+  height: 3%;
+  background-color: red;
+  position: absolute;
+}
