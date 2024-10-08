@@ -1,4 +1,6 @@
 "use strict";
+import tmp from "./template.hbs";
+
 const users = [
   {
     name: "Emily",
@@ -56,13 +58,11 @@ const users = [
   },
 ];
 
-import tmp from "./template.hbs";
-
 const userTemblate = {
   title: "our users",
   users: users,
 };
 
 // const markup = tmp(userTemblate);
-const markup = tmp({ userTemblate });
-document.querySelector(".users-section").innerHTML = markup;
+// const markup = tmp({ userTemblate });
+// document.querySelector(".users-section").innerHTML = markup;
