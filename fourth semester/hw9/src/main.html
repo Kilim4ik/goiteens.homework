@@ -7,20 +7,28 @@
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
-    <form action=""></form>
     <section>
-      <ul class="todo-list">
-        <li class="todo-list__item">
-          <button data-action="delete" class="todo-list__button">
-            видалити
-          </button>
-          <button data-action="ready" class="todo-list__button">
-            не готово
-          </button>
-          <p class="todo-list__content"></p>
-        </li>
-      </ul>
+      <input id="new-task" type="text" />
+      <button id="add-task">+</button>
+      <ul class="todo-list"></ul>
     </section>
+    <section class="form-section">
+      <form id="reg-form" action="">
+        <input type="text" placeholder="login" />
+        <input type="text" placeholder="password" />
+        <button>submit</button>
+      </form>
+      <form id="login-form" action="">
+        <input type="text" placeholder="login" />
+        <input type="text" placeholder="password" />
+        <button>login</button>
+        <p id="user-name"></p>
+      </form>
+    </section>
+    <input id="new-link-txt" type="text" />
+    <input id="new-link-url" type="text" />
+    <button id="add-link">+</button>
+    <section class="history-section"></section>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
