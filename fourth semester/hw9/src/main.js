@@ -155,3 +155,113 @@ historySection.addEventListener("click", (e) => {
     renderHistory();
   }
 });
+
+let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+const contactForm = document.querySelector("#new-contact-form");
+const changeForm = document.querySelector("#change-contact-form");
+const template = document.querySelector(".contacts-list");
+
+const takeContactData = (inputs) => {
+  const contactData = Array.from(inputs.children).map((elem) => elem.value);
+  contactData.pop();
+  if (contactData.some((elem) => elem == "" || elem == " ")) return;
+  return contactData;
+};
+const arrayToObj = (callback) => {
+  if (!callback) return;
+  const contact = {
+    name: callback[0],
+    surname: callback[1],
+    number: Number(callback[2]),
+    email: callback[3],
+  };
+  return contact;
+};
+const clearForm = (arr) => {
+  arr = arr.children;
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].value = "";
+  }
+};
+const chengeInputsForChenging = (arrInputs, contact) => {
+  arrInputs[0].value = contact.name;
+  arrInputs[1].value = contact.surname;
+  arrInputs[2].value = contact.number;
+  arrInputs[3].value = contact.email;
+};
+
+const updateJSON = () => {
+  localStorage.setItem("contacts", JSON.stringify(contacts));
+};
+const renderTable = () => {
+  let code = ``;
+  contacts
+    .filter((elem) => elem)
+    .forEach((elem) => {
+      code += `
+      <li>
+      <ul class="contact">
+        <li class="contact__elem">${elem.name}</li>
+        <li class="contact__elem">${elem.surname}</li>
+        <li class="contact__elem">${elem.number}</li>
+        <li class="contact__elem">${elem.email}</li>
+        <li class="contact__elem">
+          <button class="contact__delete-button" 
+          data-contact-name="${elem.name}" 
+          data-contact-surname="${elem.surname}">
+          за кораблем
+          </button>
+        </li>
+        <li class="contact__elem">
+          <button class="contact__change-button" 
+          data-contact-name="${elem.name}" 
+          data-contact-surname="${elem.surname}">
+          заміна
+          </button>
+        </li>
+      </ul>
+    </li>`;
+    });
+  template.innerHTML = code;
+};
+renderTable();
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  contacts.push(arrayToObj(takeContactData(contactForm)));
+  updateJSON();
+  clearForm(contactForm);
+  renderTable();
+});
+template.addEventListener("click", (e) => {
+  if (e.target.classList == "contact__delete-button") {
+    const name = e.target.dataset.contactName;
+    const surname = e.target.dataset.contactSurname;
+    contacts = contacts.filter((elem) => {
+      if (elem != null) {
+        return elem.name !== name && elem.surname !== surname;
+      }
+    });
+    updateJSON();
+    renderTable();
+  }
+  if (e.target.classList == "contact__change-button") {
+    const name = e.target.dataset.contactName;
+    const surname = e.target.dataset.contactSurname;
+    const contact = contacts.find(
+      (elem) => elem.name == name && elem.surname == surname
+    );
+    chengeInputsForChenging(changeForm.children, contact);
+    changeForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      contacts.splice(
+        contacts.indexOf(contact),
+        1,
+        arrayToObj(takeContactData(changeForm))
+      );
+      clearForm(changeForm);
+      updateJSON();
+      renderTable();
+    });
+  }
+});
