@@ -39,9 +39,9 @@ const render = () => {
     <button id="${elem.id}" data-action="delete" class="todo-list__button">
       видалити
     </button>
-    <button  data-action="${
-      elem.isReady ? "ready" : "notReady"
-    }" class="todo-list__button">
+    <button id="${elem.id}" data-action="${
+        elem.isReady ? "ready" : "notReady"
+      }" class="todo-list__button">
     ${elem.isReady ? "повернути" : "готово"}
  
     </button>
@@ -50,7 +50,6 @@ const render = () => {
     `;
     });
   list.innerHTML = code;
-  console.log(id);
 };
 render();
 btn.addEventListener("click", () => {
@@ -63,16 +62,22 @@ btn.addEventListener("click", () => {
   localStorage.setItem("tasks", JSON.stringify(tasks));
   render();
   id++;
-
-  console.log(tasks);
 });
+
 list.addEventListener("click", (e) => {
   if (e.target.dataset.action == "ready") {
     e.target.dataset.action = "notReady";
     e.target.textContent = "готово";
+
+    let task = tasks.find((task) => task.id == e.target.id);
+    task.isReady = false;
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   } else if (e.target.dataset.action == "notReady") {
     e.target.dataset.action = "ready";
     e.target.textContent = "повернути";
+    let task = tasks.find((task) => task.id == e.target.id);
+    task.isReady = true;
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }
   if (e.target.dataset.action == "delete") {
     tasks[Number(e.target.id)].isDeleted = true;
@@ -84,13 +89,16 @@ list.addEventListener("click", (e) => {
 let users = JSON.parse(localStorage.getItem("users")) || [];
 let thisUser = JSON.parse(localStorage.getItem("thisUser")) || undefined;
 const section = document.querySelector(".form-section");
-
-document.querySelector(
-  "#user-name"
-).textContent = `Вітання , ${thisUser.login}`;
+const greeting = () => {
+  if (thisUser) {
+    document.querySelector(
+      "#user-name"
+    ).textContent = `Вітання , ${thisUser.login}`;
+  }
+};
+greeting();
 section.addEventListener("submit", (e) => {
   e.preventDefault();
-
   if (e.target.id == "reg-form") {
     users.push({
       login: e.target.children[0].value,
@@ -106,6 +114,7 @@ section.addEventListener("submit", (e) => {
     );
     thisUser = user;
     localStorage.setItem("thisUser", JSON.stringify(user));
+    greeting();
   }
 });
 
@@ -129,6 +138,7 @@ const renderHistory = () => {
   historySection.innerHTML = code;
 };
 renderHistory();
+
 btnLink.addEventListener("click", () => {
   const arr = historySection.children;
 
@@ -143,7 +153,6 @@ btnLink.addEventListener("click", () => {
 });
 historySection.addEventListener("click", (e) => {
   if (e.target.dataset.action == "delete") {
-    history.forEach((elem) => console.log(elem));
     history = history.filter((elem) => elem.id !== Number(e.target.id));
     renderHistory();
     localStorage.setItem("history", JSON.stringify(history));
