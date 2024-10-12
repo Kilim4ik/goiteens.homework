@@ -1,5 +1,5 @@
 "use strict";
-import tmp from "./template.hbs";
+import tmp from "./template.handlebars";
 
 const users = [
   {
