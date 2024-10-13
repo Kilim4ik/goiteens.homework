@@ -1,0 +1,16 @@
+{
+  "name": "hw4",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "Danylo Lavrovskyi",
+  "license": "ISC",
+  "description": "homework",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
