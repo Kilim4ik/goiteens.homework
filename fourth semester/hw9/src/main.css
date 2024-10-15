@@ -1,0 +1,3 @@
+li:has(button[data-action="ready"]) p {
+  color: red;
+}
