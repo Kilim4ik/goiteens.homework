@@ -1,0 +1,9 @@
+.timer {
+  display: flex;
+}
+.field {
+  width: 100px;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+}
