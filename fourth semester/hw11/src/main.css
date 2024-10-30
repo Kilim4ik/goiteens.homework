@@ -1,19 +1,56 @@
 .anim {
-  animation: scaling 0.4s 2;
+  animation: scaling 10s;
 }
 
 @keyframes scaling {
   0% {
     transform: scale(1);
   }
-  25% {
+  10% {
     transform: scale(1.3);
   }
-  50% {
+  15% {
     transform: scale(1.6);
   }
-  75% {
+  20% {
     transform: scale(1.3);
+  }
+  25% {
+    transform: scale(1.6);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  35% {
+    transform: scale(1.6);
+  }
+  40% {
+    transform: scale(1.3);
+  }
+  45% {
+    transform: scale(1.6);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  55% {
+    transform: scale(1.6);
+  }
+  60% {
+    transform: scale(1.3);
+  }
+  65% {
+    transform: scale(1.6);
+  }
+
+  70% {
+    transform: scale(2.5);
+  }
+  71% {
+    transform: scale(0);
+  }
+  99% {
+    transform: scale(0);
   }
   100% {
     transform: scale(1);

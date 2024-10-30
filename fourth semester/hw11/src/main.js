@@ -1,10 +1,10 @@
 "use strict";
-let minuts = 1.5 * 60;
+let minutes = 1 * 60;
 const timeID = setInterval(() => {
-  if (minuts == 30) alert(`лишилось ${minuts} хвилин`);
+  if (minutes == 30) alert(`лишилось ${minutes} хвилин`);
   //чи не має конфліктувати алерт з асинхроністю ? Якшо не закривати вікно
-  if (!minuts) alert("час вичерпано");
-  minuts--;
+  if (!minutes) alert("час вичерпано");
+  minutes--;
   clearInterval(timeID);
 }, 60 * 1000);
 
@@ -17,13 +17,10 @@ const timer = () => {
   timerContent.textContent = "";
   return setInterval(() => {
     console.log(seconds);
-    if (seconds <= 10) timerContent.textContent = "!!!";
+    if (seconds <= 10) buttonStart.classList.add("anim");
     if (seconds <= 0) {
       timerContent.textContent = "Час вичерпано";
-      buttonStart.classList.add("anim");
-      setTimeout(() => {
-        buttonStart.classList.remove("anim");
-      }, 3000);
+      buttonStart.classList.remove("anim");
       clearInterval(timerID);
       timerID = undefined;
       seconds = 30;
