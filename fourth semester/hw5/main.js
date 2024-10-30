@@ -5,7 +5,7 @@ import "@pnotify/core/dist/BrightTheme.css";
 import "@pnotify/confirm/dist/PNotifyConfirm.css";
 import Chart from "chart.js/auto";
 const keyDawnMess = document.querySelector(".key-game__text");
-const keyDawnButton = document.querySelector(".key-game__button");
+const keyDawnButton = document.querySelector("#key");
 const reloadButton = document.querySelector("button");
 let currentKeyIndex = 0;
 const keys = ["F", "Q", "W", "E", "R", "T", "Y", "1", "2", "3"];
