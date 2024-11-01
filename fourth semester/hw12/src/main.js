@@ -42,11 +42,6 @@ class CountdownTimer {
     this.calc();
   }
   calc() {
-    console.log(
-      this.selector,
-      this.targetDate.getTime(),
-      this.currentTime.getTime()
-    );
     time =
       this.targetDate.getTime() -
       this.currentTime.getTime() +
@@ -57,7 +52,6 @@ new CountdownTimer({
   selector: "#timer-1",
   targetDate: new Date("Jul 17, 2025"),
 });
-console.log(calcDate());
 
 const ffd = document.querySelector("#f-f-d");
 const fbd = document.querySelector("#f-b-d");
@@ -105,8 +99,6 @@ setInterval(() => {
     (Number(secs) + 1).toString().length < 2
       ? "0" + (Number(secs) + 1)
       : (Number(secs) + 1).toString();
-  console.log("sec", secs, previousSec);
-  console.log("min", mins, previousMin);
 
   ffd.innerHTML = days[0];
   fbd.innerHTML = days[0] !== "0" ? days[0] - 1 : 0;
@@ -214,279 +206,39 @@ setInterval(() => {
       setTimeout(() => {
         lcm.classList.add("flipped");
       }, 100);
-    }
-  }
-  if (mins == "00") {
-    rch.classList.remove("flipped");
 
-    setTimeout(() => {
-      rch.classList.add("flipped");
-    }, 100);
-    if (hours[1] == "0") {
-      lch.classList.remove("flipped");
+      if (mins === "00") {
+        rch.classList.remove("flipped");
 
-      setTimeout(() => {
-        lch.classList.add("flipped");
-      }, 100);
-    }
-  }
-  if (hours == "00") {
-    rcd.classList.remove("flipped");
+        setTimeout(() => {
+          rch.classList.add("flipped");
+        }, 100);
+        if (hours[1] == "0") {
+          lch.classList.remove("flipped");
 
-    setTimeout(() => {
-      rcd.classList.add("flipped");
-    }, 100);
-    if (days[1] == "0") {
-      lcd.classList.remove("flipped");
+          setTimeout(() => {
+            lch.classList.add("flipped");
+          }, 100);
+        }
+        mins = 0;
+        if (hours == "00") {
+          rcd.classList.remove("flipped");
 
-      setTimeout(() => {
-        lcd.classList.add("flipped");
-      }, 100);
+          setTimeout(() => {
+            rcd.classList.add("flipped");
+          }, 100);
+          if (days[1] == "0") {
+            lcd.classList.remove("flipped");
+
+            setTimeout(() => {
+              lcd.classList.add("flipped");
+            }, 100);
+          }
+        }
+      }
     }
   }
 
   document.head.appendChild(style);
   time -= 1000;
 }, 1000);
-// setInterval(() => {
-//   let { days, hours, mins, secs } = calcDate();
-
-//   console.log("mins", mins, previousMin);
-//   console.log("secs", secs, previousSec);
-
-//   //!
-//   if (previousSec[1] !== 0) {
-//     sfs.innerHTML = secs[1];
-//     sbs.innerHTML = secs[1] != 0 ? secs[1] - 1 : 9;
-//     const style = document.createElement("style");
-//     style.innerHTML = `
-
-//   .flip-clock-s .digit-right::before {
-//     content: '${secs[1]}';
-
-//   }
-//   .flip-clock-s .digit-right::after {
-//     content: '${secs[1] != 0 ? secs[1] - 1 : 9}';
-//   }
-// `;
-//     document.head.appendChild(style);
-
-//     rcs.classList.remove("flipped");
-
-//     setTimeout(() => {
-//       rcs.classList.add("flipped");
-//     }, 100);
-//   }
-//   if (secs[1] === "0") {
-//     ffs.innerHTML = secs[0];
-//     fbs.innerHTML = secs[0] != 0 ? secs[0] - 1 : 5;
-//     const style = document.createElement("style");
-//     style.innerHTML = `
-
-//       .flip-clock-s .digit-left::before {
-//         content: '${secs[0]}';
-
-//       }
-//       .flip-clock-s .digit-left::after {
-//         content: '${secs[0] != 0 ? secs[0] - 1 : 5}';
-//       }
-//     `;
-//     document.head.appendChild(style);
-
-//     lcs.classList.remove("flipped");
-
-//     setTimeout(() => {
-//       lcs.classList.add("flipped");
-//     }, 100);
-//   }
-//   previousSec = secs;
-//   if (secs === "00") {
-//     sfm.innerHTML = mins[1];
-//     sbm.innerHTML = mins[1] != 0 ? mins[1] - 1 : 9;
-//     const style = document.createElement("style");
-//     style.innerHTML = `
-
-//       .flip-clock-m .digit-right::before {
-//         content: '${mins[1]}';
-
-//       }
-//       .flip-clock-m .digit-right::after {
-//         content: '${mins[1] != 0 ? mins[1] - 1 : 9}';
-//       }
-//     `;
-//     document.head.appendChild(style);
-
-//     rcm.classList.remove("flipped");
-
-//     setTimeout(() => {
-//       rcm.classList.add("flipped");
-//     }, 100);
-
-//     if (mins[1] === "0") {
-//       console.log("00000");
-//       ffm.innerHTML = mins[0];
-//       fbm.innerHTML = mins[0] != 0 ? mins[0] - 1 : 5;
-//       const style = document.createElement("style");
-//       style.innerHTML = `
-
-//       .flip-clock-m .digit-left::before {
-//         content: '${mins[0]}';
-
-//       }
-//       .flip-clock-m .digit-left::after {
-//         content: '${mins[0] != 0 ? mins[0] - 1 : 5}';
-//       }
-//     `;
-//       document.head.appendChild(style);
-
-//       lcm.classList.remove("flipped");
-
-//       setTimeout(() => {
-//         lcm.classList.add("flipped");
-//       }, 100);
-//     }
-//     previousMin = mins;
-//   }
-
-//!
-//   if (previousMin[1] !== 0) {
-//     sfs.innerHTML = mins[1];
-//     sbs.innerHTML = mins[1] != 0 ? mins[1] - 1 : 9;
-//     const style = document.createElement("style");
-//     style.innerHTML = `
-
-//   .flip-clock-s .digit-right::before {
-//     content: '${mins[1]}';
-
-//   }
-//   .flip-clock-s .digit-right::after {
-//     content: '${mins[1] != 0 ? mins[1] - 1 : 9}';
-//   }
-// `;
-//     document.head.appendChild(style);
-
-//     rcs.classList.remove("flipped");
-
-//     setTimeout(() => {
-//       rcs.classList.add("flipped");
-//     }, 100);
-//   }
-//   if (mins[1] === "0") {
-//     console.log("00000");
-//     ffs.innerHTML = mins[0];
-//     fbs.innerHTML = mins[0] != 0 ? mins[0] - 1 : 5;
-//     const style = document.createElement("style");
-//     style.innerHTML = `
-
-//   .flip-clock-s .digit-left::before {
-//     content: '${mins[0]}';
-
-//   }
-//   .flip-clock-s .digit-left::after {
-//     content: '${mins[0] != 0 ? mins[0] - 1 : 5}';
-//   }
-// `;
-//     document.head.appendChild(style);
-
-//     lcs.classList.remove("flipped");
-
-//     setTimeout(() => {
-//       lcs.classList.add("flipped");
-//     }, 100);
-//   }
-//   previousMin = mins;
-//   if (previousSec[1] !== 0) {
-//     sfs.innerHTML = secs[1];
-//     sbs.innerHTML = secs[1] != 0 ? secs[1] - 1 : 9;
-//     const style = document.createElement("style");
-//     style.innerHTML = `
-
-//   .flip-clock-s .digit-right::before {
-//     content: '${secs[1]}';
-
-//   }
-//   .flip-clock-s .digit-right::after {
-//     content: '${secs[1] != 0 ? secs[1] - 1 : 9}';
-//   }
-// `;
-//     document.head.appendChild(style);
-
-//     rcs.classList.remove("flipped");
-
-//     setTimeout(() => {
-//       rcs.classList.add("flipped");
-//     }, 100);
-//   }
-//   if (secs[1] === "0") {
-//     console.log("00000");
-//     ffs.innerHTML = secs[0];
-//     fbs.innerHTML = secs[0] != 0 ? secs[0] - 1 : 5;
-//     const style = document.createElement("style");
-//     style.innerHTML = `
-
-//   .flip-clock-s .digit-left::before {
-//     content: '${secs[0]}';
-
-//   }
-//   .flip-clock-s .digit-left::after {
-//     content: '${secs[0] != 0 ? secs[0] - 1 : 5}';
-//   }
-// `;
-//     document.head.appendChild(style);
-
-//     lcs.classList.remove("flipped");
-
-//     setTimeout(() => {
-//       lcs.classList.add("flipped");
-//     }, 100);
-//   }
-//   previousSec = secs;
-//   if (previousSec[1] !== 0) {
-//     sfs.innerHTML = secs[1];
-//     sbs.innerHTML = secs[1] != 0 ? secs[1] - 1 : 9;
-//     const style = document.createElement("style");
-//     style.innerHTML = `
-
-//   .flip-clock-s .digit-right::before {
-//     content: '${secs[1]}';
-
-//   }
-//   .flip-clock-s .digit-right::after {
-//     content: '${secs[1] != 0 ? secs[1] - 1 : 9}';
-//   }
-// `;
-//     document.head.appendChild(style);
-
-//     rcs.classList.remove("flipped");
-
-//     setTimeout(() => {
-//       rcs.classList.add("flipped");
-//     }, 100);
-//   }
-//   if (secs[1] === "0") {
-//     console.log("00000");
-//     ffs.innerHTML = secs[0];
-//     fbs.innerHTML = secs[0] != 0 ? secs[0] - 1 : 5;
-//     const style = document.createElement("style");
-//     style.innerHTML = `
-
-//   .flip-clock-s .digit-left::before {
-//     content: '${secs[0]}';
-
-//   }
-//   .flip-clock-s .digit-left::after {
-//     content: '${secs[0] != 0 ? secs[0] - 1 : 5}';
-//   }
-// `;
-//     document.head.appendChild(style);
-
-//     lcs.classList.remove("flipped");
-
-//     setTimeout(() => {
-//       lcs.classList.add("flipped");
-//     }, 100);
-//   }
-//   previousSec = secs;
-
-//   time -= 1000;
-// }, 1000);
