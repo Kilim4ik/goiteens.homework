@@ -1,0 +1,29 @@
+form {
+  width: 50%;
+  padding: 20px 10px;
+  border-radius: 20px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 auto;
+}
+input {
+  padding: 8px 6px;
+  outline: none;
+}
+button {
+  background-color: blue;
+  color: wheat;
+  transition: all 0.45s;
+  width: 40%;
+  border-radius: 12px;
+  align-self: center;
+}
+button:hover{
+  background-color: lightskyblue;
+  color: black;
+}
+.pnotify {
+  background-color: lightgreen;
+}
