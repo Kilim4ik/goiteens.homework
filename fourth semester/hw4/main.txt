@@ -1,0 +1,263 @@
+dania@Noutbuk-Dana hw9 % cd .. 
+dania@Noutbuk-Dana .Trash % cd .. 
+dania@Noutbuk-Dana ~ % cd ./Desktop/goiteens.homework/fourth\ semester/hw3 
+dania@Noutbuk-Dana hw3 % npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (hw3) npm warn init canceled
+
+dania@Noutbuk-Dana hw3 % npm init -y
+Wrote to /Users/dania/Desktop/goiteens.homework/fourth semester/hw3/package.json:
+
+{
+  "name": "hw3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+
+dania@Noutbuk-Dana hw3 % touch index.html
+dania@Noutbuk-Dana hw3 % touch styles.css 
+dania@Noutbuk-Dana hw3 % touch main.js
+dania@Noutbuk-Dana hw3 % cd ..                                              
+dania@Noutbuk-Dana .Trash % cd ..        
+dania@Noutbuk-Dana ~ % cd ./Desktop/goiteens.homework/fourth\ semester/hw4
+dania@Noutbuk-Dana hw4 % npm init -y
+Wrote to /Users/dania/Desktop/goiteens.homework/fourth semester/hw4/package.json:
+
+{
+  "name": "hw4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+
+dania@Noutbuk-Dana hw4 % touch index.html                                   
+dania@Noutbuk-Dana hw4 % touch main.js                                      
+dania@Noutbuk-Dana hw4 % touch styles.css                                   
+dania@Noutbuk-Dana hw4 % npm init -y      
+Wrote to /Users/dania/Desktop/goiteens.homework/fourth semester/hw4/package.json:
+
+{
+  "name": "hw4",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+
+dania@Noutbuk-Dana hw4 % npm config set init.author.name "Danylo Lavrovskiy"
+npm error The `init.author.name` option is deprecated, and can not be set in this way
+npm error       Use `--init-author-name` instead.
+npm error     
+npm error A complete log of this run can be found in: /Users/dania/.npm/_logs/2024-10-07T09_43_52_037Z-debug-0.log
+dania@Noutbuk-Dana hw4 % touch main.txt
+dania@Noutbuk-Dana hw4 % 
+dania@Noutbuk-Dana hw4 % npm config set --init-author-name "Danylo Lavrovskiy"
+zsh: command not found: npm
+dania@Noutbuk-Dana hw4 % source ~/.bashrc          
+dania@Noutbuk-Dana hw4 % npm config set --init-author-name "Danylo Lavrovskiy"
+npm error code EUSAGE
+npm error
+npm error Manage the npm configuration files
+npm error
+npm error Usage:
+npm error npm config set <key>=<value> [<key>=<value> ...]
+npm error npm config get [<key> [<key> ...]]
+npm error npm config delete <key> [<key> ...]
+npm error npm config list [--json]
+npm error npm config edit
+npm error npm config fix
+npm error
+npm error Options:
+npm error [--json] [-g|--global] [--editor <editor>] [-L|--location <global|user|project>]
+npm error [-l|--long]
+npm error
+npm error alias: c
+npm error
+npm error Run "npm help config" for more info
+npm error A complete log of this run can be found in: /Users/dania/.npm/_logs/2024-10-07T09_46_00_942Z-debug-0.log
+dania@Noutbuk-Dana hw4 % npm config set init.author.name "Danylo Lavrovskiy"
+
+npm error The `init.author.name` option is deprecated, and can not be set in this way
+npm error       Use `--init-author-name` instead.
+npm error     
+npm error A complete log of this run can be found in: /Users/dania/.npm/_logs/2024-10-07T09_46_54_438Z-debug-0.log
+dania@Noutbuk-Dana hw4 %  npm --init-author-name "danylo Lavrovskiy"
+npm <command>
+
+Usage:
+
+npm install        install all the dependencies in your project
+npm install <foo>  add the <foo> dependency to your project
+npm test           run this project's tests
+npm run <foo>      run the script named <foo>
+npm <command> -h   quick help on <command>
+npm -l             display usage info for all commands
+npm help <term>    search for help on <term>
+npm help npm       more involved overview
+
+All commands:
+
+    access, adduser, audit, bugs, cache, ci,
+    completion, config, dedupe, deprecate, diff,
+    dist-tag, docs, doctor, edit, exec, explain,
+    explore, find-dupes, fund, get, help, help-search,
+    hook, init, install, install-ci-test, install-test,
+    link, ll, login, logout, ls, org, outdated, owner,
+    pack, ping, pkg, prefix, profile, prune, publish,
+    query, rebuild, repo, restart, root, run-script,
+    sbom, search, set, shrinkwrap, star, stars, start,
+    stop, team, test, token, uninstall, unpublish,
+    unstar, update, version, view, whoami
+
+Specify configs in the ini-formatted file:
+    /Users/dania/.npmrc
+or on the command line via: npm <command> --key=value
+
+More configuration info: npm help config
+Configuration fields: npm help 7 config
+
+npm@10.8.2 /opt/homebrew/lib/node_modules/npm
+dania@Noutbuk-Dana hw4 %  --init-author-name "danylo Lavrovskiy" 
+zsh: command not found: --init-author-name
+dania@Noutbuk-Dana hw4 %  npm --init-author-name =  "danylo Lavrovskiy"
+Unknown command: "danylo Lavrovskiy"
+
+To see a list of supported npm commands, run:
+  npm help
+dania@Noutbuk-Dana hw4 %  npm --init-author  "danylo Lavrovskiy" 
+Unknown command: "danylo Lavrovskiy"
+
+To see a list of supported npm commands, run:
+  npm help
+dania@Noutbuk-Dana hw4 % npm config set init.author "Danylo Lavrovskiy"     
+
+npm error `init.author` is not a valid npm option
+npm error A complete log of this run can be found in: /Users/dania/.npm/_logs/2024-10-07T09_49_57_340Z-debug-0.log
+dania@Noutbuk-Dana hw4 % npm config set init-author-name "Danylo Lavrovskyi"
+dania@Noutbuk-Dana hw4 % npm config set init-author "Danylo Lavrovskyi"     
+npm error `init-author` is not a valid npm option
+npm error A complete log of this run can be found in: /Users/dania/.npm/_logs/2024-10-07T09_51_24_554Z-debug-0.log
+dania@Noutbuk-Dana hw4 % 
+dania@Noutbuk-Dana hw4 % npm init --yes --author="Danylo Lavrovskyi"
+
+Wrote to /Users/dania/Desktop/goiteens.homework/fourth semester/hw4/package.json:
+
+{
+  "name": "hw4",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Danylo Lavrovskyi",
+  "license": "ISC",
+  "description": ""
+}
+
+
+
+dania@Noutbuk-Dana hw4 % npm init --yes --description = "homework"
+npm error code EINVALIDTAGNAME
+npm error Invalid tag name "=" of package "=": Tags may not have any characters that encodeURIComponent encodes.
+npm error A complete log of this run can be found in: /Users/dania/.npm/_logs/2024-10-07T10_11_21_668Z-debug-0.log
+dania@Noutbuk-Dana hw4 % npm init --yes --description="homework" 
+npm error code E404
+npm error 404 Not Found - GET https://registry.npmjs.org/create-homework - Not found
+npm error 404
+npm error 404  'create-homework@*' is not in this registry.
+npm error 404
+npm error 404 Note that you can also install from a
+npm error 404 tarball, folder, http url, or git url.
+npm error A complete log of this run can be found in: /Users/dania/.npm/_logs/2024-10-07T10_11_42_007Z-debug-0.log
+dania@Noutbuk-Dana hw4 % npm init --yes --description="homework"
+npm error code E404
+npm error 404 Not Found - GET https://registry.npmjs.org/create-homework - Not found
+npm error 404
+npm error 404  'create-homework@*' is not in this registry.
+npm error 404
+npm error 404 Note that you can also install from a
+npm error 404 tarball, folder, http url, or git url.
+npm error A complete log of this run can be found in: /Users/dania/.npm/_logs/2024-10-07T10_12_22_893Z-debug-0.log
+dania@Noutbuk-Dana hw4 % npm init --yes --description="рц"         
+npm error code EINVALIDTAGNAME
+npm error Invalid tag name "рц" of package "рц": Tags may not have any characters that encodeURIComponent encodes.
+npm error A complete log of this run can be found in: /Users/dania/.npm/_logs/2024-10-07T10_13_19_859Z-debug-0.log
+dania@Noutbuk-Dana hw4 % npm init --yes --description="hw"
+
+npm error code E404
+npm error 404 Not Found - GET https://registry.npmjs.org/create-hw - Not found
+npm error 404
+npm error 404  'create-hw@*' is not in this registry.
+npm error 404
+npm error 404 Note that you can also install from a
+npm error 404 tarball, folder, http url, or git url.
+npm error A complete log of this run can be found in: /Users/dania/.npm/_logs/2024-10-07T10_13_34_423Z-debug-0.log
+dania@Noutbuk-Dana hw4 % 
+dania@Noutbuk-Dana goiteens.homework % cd fourth\ semester/hw4 
+dania@Noutbuk-Dana hw4 % npm install http-server   
+zsh: command not found: npm
+dania@Noutbuk-Dana hw4 % source ~/.bashrc          
+dania@Noutbuk-Dana hw4 % npm install http-server
+
+added 46 packages, and audited 47 packages in 2s
+
+15 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+dania@Noutbuk-Dana hw4 % http-server
+Starting up http-server, serving ./
+
+http-server version: 14.1.1
+
+http-server settings: 
+CORS: disabled
+Cache: 3600 seconds
+Connection Timeout: 120 seconds
+Directory Listings: visible
+AutoIndex: visible
+Serve GZIP Files: false
+Serve Brotli Files: false
+Default File Extension: none
+
+Available on:
+  http://127.0.0.1:8080
+  http://192.168.68.109:8080
+Hit CTRL-C to stop the server
+
+
+
