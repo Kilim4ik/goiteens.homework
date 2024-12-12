@@ -1,0 +1,11 @@
+.is-hidden {
+  display: none !important;
+}
+.movie-form {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
