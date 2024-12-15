@@ -92,9 +92,7 @@ list.addEventListener("click", async (e) => {
   if (e.target.id === "load-more") {
     page++;
     const currentScroll = window.scrollY;
-    // const arr = ;
     updateRender(await fetchData(page, searchInput.value));
     window.scrollTo(0, currentScroll);
-    // setBooks(page);
   }
 });
