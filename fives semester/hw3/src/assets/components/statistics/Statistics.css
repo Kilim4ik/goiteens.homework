@@ -1,0 +1,27 @@
+.stat-section {
+  border: 1px solid black;
+}
+.stat-section:has(h3) {
+  display: grid;
+  gap: 2%;
+  margin-top: 5%;
+}
+.stat-list {
+  margin: 0;
+  display: flex;
+}
+.item {
+  aspect-ratio: 1/1;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  span {
+    color: white;
+  }
+}
+.percentage {
+  font-weight: 500;
+  font-size: 20px;
+}
