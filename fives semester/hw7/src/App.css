@@ -1,0 +1,10 @@
+.App {
+  margin: 20px auto 0;
+  padding: 40px 30px;
+  border-radius: 12px;
+  background-color: #9adcf2;
+  color: black;
+  max-width: 80vw;
+  min-height: 80vh;
+  font-family: sans-serif;
+}
