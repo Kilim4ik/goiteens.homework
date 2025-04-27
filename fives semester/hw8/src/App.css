@@ -1,0 +1,25 @@
+html {
+  font-family: sans-serif;
+}
+button {
+  background: white;
+  border: 1px solid grey;
+  border-radius: 6px;
+  padding: 4px 8px;
+  transition: all 0.3s;
+}
+button:hover {
+  transform: scale(1.1);
+  background-color: lightblue;
+  border: none;
+}
+ul:has(button) {
+  display: flex;
+  list-style-type: none;
+  gap: 8px;
+}
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
