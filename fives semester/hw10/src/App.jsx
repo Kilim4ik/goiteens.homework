@@ -21,7 +21,7 @@ class App extends Component {
     const form = e.currentTarget;
     const contactID = nanoid();
     e.preventDefault();
-
+    console.log(form.reportValidity());
     // if (form.reportValidity()) {
     //   alert("Not valid data");
     //   return;
@@ -43,6 +43,13 @@ class App extends Component {
   handleSearch = (filter) => {
     this.setState({ filter });
   };
+  componentDidUpdate() {
+    localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
+  }
+  componentDidMount() {
+    const contacts = JSON.parse(localStorage.getItem("contacts"));
+    if (contacts) this.setState({ contacts });
+  }
   render() {
     return (
       <div className="App">

@@ -12,6 +12,7 @@ class ContactList extends Component {
               )
               .map(({ id, name, number }) => (
                 <ContactListItem
+                  key={id}
                   name={name}
                   number={number}
                   handleDelete={() => handleDelete(id)}
@@ -19,6 +20,7 @@ class ContactList extends Component {
               ))
           : contacts.map(({ id, name, number }) => (
               <ContactListItem
+                key={id}
                 name={name}
                 number={number}
                 handleDelete={() => handleDelete(id)}
