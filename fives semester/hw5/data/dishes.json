@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2021/03/French-fries-b9e3e0c.jpg",
+    "name": "French fries",
+    "time": "30 min",
+    "calories": "400 colories",
+    "difficulty": 0
+  },
+  {
+    "id": 2,
+    "image": "https://www.allrecipes.com/thmb/5JVfA7MxfTUPfRerQMdF-nGKsLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/25473-the-perfect-basic-burger-DDMFS-4x3-56eaba3833fd4a26a82755bcd0be0c54.jpg",
+    "name": "Burger ",
+    "time": "15 min",
+    "calories":  "500 colories",
+    "difficulty": 0
+  },
+  {
+    "id": 3,
+    "image": "https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.6666666666666667xw:1xh;center,top&resize=1200:*",
+    "name": "Pizza ",
+    "time": "20 min",
+    "calories": "450 colories",
+    "difficulty": 1
+  },
+  {
+    "id": 4,
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/spaghetti_carb-a2ffbde.jpg?quality=90&resize=500,454",
+    "name": "Carbonara ",
+    "time": "25 min",
+    "calories": "550 colories",
+    "difficulty": 3
+  }
+]
