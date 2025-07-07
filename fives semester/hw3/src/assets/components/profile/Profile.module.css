@@ -1,0 +1,38 @@
+.profile {
+  max-width: 300px;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: grid;
+  align-content: space-between;
+  aspect-ratio: 3/4;
+}
+.description {
+  margin-top: 8%;
+}
+.avatar {
+  width: 30%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.name {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+.stats {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  li {
+    aspect-ratio: 1/1;
+    border: 1px solid lightslategray;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+}
+.quantity {
+  font-weight: 600;
+  font-size: 1.3em;
+}
