@@ -1,0 +1,12 @@
+.info-message {
+  position: fixed;
+  top: 10px;
+  right: 0;
+  background-color: rgba(135, 187, 162, 0.2);
+  padding: 8px 12px;
+  min-width: 120px;
+  border-radius: 8px 0 0 8px;
+  p {
+    text-align: start;
+  }
+}
