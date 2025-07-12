@@ -1,16 +1,15 @@
-import { MagnifyingGlass } from "react-spinners";
+import { ClipLoader } from "react-spinners";
 const Loader = () => {
   return (
     <div className="loader-container">
-      <MagnifyingGlass
+      <ClipLoader
         visible={true}
-        height="180"
-        width="180"
+        size={120}
         ariaLabel="magnifying-glass-loading"
         wrapperStyle={{}}
         wrapperClass="magnifying-glass-wrapper"
         glassColor="#c0efff"
-        color="#e15b64"
+        color="#3f51b5"
       />
     </div>
   );

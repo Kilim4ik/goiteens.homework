@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <Searchbar />
+      <Loader />
       <ImageGallery />
       {isLoading && <Loader />}
       {error && <p>Opss... there is an error: {error?.message}</p>}
