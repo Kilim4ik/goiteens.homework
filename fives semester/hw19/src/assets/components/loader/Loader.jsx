@@ -1,4 +1,4 @@
-import { MagnifyingGlass } from "react-loader-spinner";
+import { MagnifyingGlass } from "react-spinners";
 const Loader = () => {
   return (
     <div className="loader-container">
