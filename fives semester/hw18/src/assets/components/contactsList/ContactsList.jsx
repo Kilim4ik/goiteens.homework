@@ -2,10 +2,10 @@ import { useContext } from "react";
 import { ContactsContext } from "../../context/contactsContext";
 
 export default function Contactslist() {
-  const { contacts, deleteContact } = useContext(ContactsContext);
+  const { filteredContacts, deleteContact } = useContext(ContactsContext);
   return (
     <ul>
-      {contacts.map(({ id, name, number }) => (
+      {filteredContacts.map(({ id, name, number }) => (
         <li key={id}>
           <p>
             {name} - {number}

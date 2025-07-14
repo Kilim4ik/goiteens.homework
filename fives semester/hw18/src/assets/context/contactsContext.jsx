@@ -37,7 +37,9 @@ export const ContactsProvider = ({ children }) => {
     setContacts(contacts.filter((elem) => elem.id !== id));
   };
   const filterContacts = (key) => {
-    setFilteredContacts(contacts.filter((elem) => elem.name.includes(key)));
+    setFilteredContacts(
+      contacts.filter((elem) => elem.name.toLocaleLowerCase().includes(key))
+    );
   };
   useEffect(() => {
     filterContacts("");
